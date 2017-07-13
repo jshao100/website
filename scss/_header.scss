@@ -1,0 +1,46 @@
+.top-bar {
+	z-index: 1;
+	background-color: $black;
+	height: 80px;
+	padding-top: 25px; //80 - 30 / 2
+	padding-bottom: 25px;
+
+	//padding if large screen
+	@media #{$large-only} {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	p, a {
+		line-height: 30px !important;
+		background-color: $black !important;
+		font-family: 'Source Sans Pro', sans-serif !important;
+		color: $white;
+	}
+
+	p {
+		font-weight: 300!important;
+		font-size: 15px!important;
+	}
+
+	a {
+		font-weight: 700 !important;
+		font-size: 17px !important;
+		color: rgba(243, 232, 232, 0.7) !important;
+
+		&.active, &:hover {
+			//border-bottom: 2px solid $white;
+			color: rgba(243, 232, 232, 1.0) !important;
+
+			&:after {
+				content : "";
+				display: block;
+				position: relative;
+				left    : -8%;
+				height  : 1px;
+				width   : 116%;  /* or 100px */
+				border-bottom:2px solid $white;
+			}
+		}
+	}
+}

@@ -1,0 +1,133 @@
+.row .row {
+	margin: 0px !important;
+}
+
+.main {
+	font-family: 'Source Sans Pro', sans-serif !important;
+	color: $gray;
+	//height: 100%;
+	//width: 100%;
+	//background-color: $white;
+
+	.resume-banner {
+		background-image: url('../images/website/resume-banner.jpg');
+
+		h1 {
+			top: 150px !important;
+			color: $black !important;
+			font-size: 75px !important;
+		}
+	}
+
+	.main-banner {
+		background-image: url('../images/website/temp_main.jpg');
+		background-color: black;
+		top: -80px;
+	}
+
+	.banner {
+		background-attachment: fixed;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		position: relative;
+		//top: -80px;
+		height: 100vh;
+		width: 100%;
+
+		.banner-icon-main {
+			text-align: center;	
+
+			.banner-icon {
+				color: $white;
+				font-size: 70px;
+				position: absolute;
+				bottom: 0px;
+				left: 50%;
+				margin-left: -22px;
+			}
+		}
+
+		h1 {
+			letter-spacing: 10px;
+			color: $white;
+			position: relative;
+			top: 180px;
+			font-size: 100px;
+			font-weight: 500;
+			line-height: 100px;
+			text-align: center;
+		}
+	}
+
+	.one-liner {
+		& > div {
+			margin: 75px auto;
+
+			h1 {
+				color: $gray2;
+				font-family: 'Source Sans Pro', sans-serif !important;
+				text-align: center;
+				font-size: 40px;
+				line-height: 40px;
+			}
+		}
+	}
+
+	.about-me {
+		margin-bottom: 75px;
+
+		.about-me-content {
+			p {
+				font-size: 18px;
+				line-height: 40px;
+				margin-bottom: 0px;
+			}
+
+			.about-me-text {
+				p {
+				}
+			}
+		}
+	}
+
+	.resume {
+		margin: 50px 0px;
+	}
+
+	.separator hr {
+		border: solid $gray2;
+		border-width: 1px 0 0;
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.contact {
+		margin: 50px 0;
+
+		.contact-header {
+			margin-bottom: 50px;
+
+			h1 {
+				font-family: 'Source Sans Pro', sans-serif !important;
+				text-align: center;
+			}
+		}
+
+		.contact-content {
+			.submit {
+				font-family: 'Source Sans Pro', sans-serif !important;
+				font-size: 14px;
+				height: 40px;
+				background-color: transparent;
+				color: $gray2;
+				border: 1px solid #cccccc;
+				border-radius: 20px;	
+
+				&:hover {
+					border-color: #999999;	
+				}
+			}
+		}
+	}
+}
