@@ -25,7 +25,7 @@ if ($root) {
 			<li><a href="#" class="active">ABOUT ME</a></li>
 			<li><a href="#resume">RESUME</a></li>
 			<li><a href="#">PROJECTS</a></li>
-			<li><a href="gallery/">PHOTOGRAPHY</a></li>
+			<li><a href="gallery">PHOTOGRAPHY</a></li>
 			<li><a href="#contact">CONTACT ME</a></li>';
 } else if ($gallery) {
 	echo '
@@ -39,7 +39,7 @@ if ($root) {
 			<li><a href="/" class="active">ABOUT ME</a></li>
 			<li><a href="/#resume">RESUME</a></li>
 			<li><a href="#">PROJECTS</a></li>
-			<li><a href="gallery/">PHOTOGRAPHY</a></li>
+			<li><a href="gallery">PHOTOGRAPHY</a></li>
 			<li><a href="/#contact">CONTACT ME</a></li>';
 }
 ?>
