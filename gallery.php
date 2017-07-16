@@ -16,14 +16,34 @@
 
 
 <section class="main">
+
+	<!-- MAIN BANNER -->
+	<div class="banner gallery-banner">
+		<div class="row banner-text">
+			<h1>PORTFOLIO
+				<div class="banner-link" class="row">
+					<a href="#gear">GEAR</a>
+				</div>
+			</h1>
+		</div>
+		<div class="banner-icon-main row banner-down">
+			<i class="banner-icon fa fa-angle-down" aria-hidden="true"></i>
+		</div>
+	</div>
+
+	<!-- MAIN GALLERY -->
 	<div class="main-gallery">
 		<div class="row">
 
 			<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
 <?php
+error_reporting(E_ERROR | E_PARSE);
+$outputArray = array();
+
 $dir = new DirectoryIterator(dirname('./images/gallery/.'));
 foreach ($dir as $fileinfo) {
+	$output = "";
 	if (!$fileinfo->isDot()) {
 		$name = $fileinfo->getFilename();
 		$path = "./images/gallery/";
@@ -50,7 +70,7 @@ foreach ($dir as $fileinfo) {
 				} else {
 					$desc = $line;
 				}
-					$i++;
+				$i++;
 			}
 			fclose($handle);
 		} else {
@@ -60,33 +80,40 @@ foreach ($dir as $fileinfo) {
 			$desc = "No Description Available";
 		} 
 
-		echo '<div class="large-4 medium-4 small-12 columns">';
+		$output .=	'<div class="large-4 medium-4 small-12 columns left gallery-thumbnail">';
 
 		//LOCATION
-		echo '<div class="row">';
-		echo '<div class="large-12 medium-12 small-12">';
-		echo '<i class="fa fa-map-marker" aria-hidden="true"></i>';
-		echo '<p>'.$location.'</p>';
-		echo '</div></div>';
+		$output .= '<div class="row">';
+		$output .= '<div class="large-12 medium-12 small-12">';
+		$output .= '<i class="fa fa-map-marker" aria-hidden="true"></i>';
+		$output .= '<p>'.$location.'</p>';
+		$output .= '</div></div>';
 
 		//PHOTO
-		echo '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">';
-		echo '<a href="'.$path.$name.'" itemprop="contentUrl" data-size="'.$width.'x'.$height.'">';
-		echo '<img src="'.$path.$name.'" itemprop="thumbnail" alt="Image description" />';
-		echo '</a>';
-		echo '<figcaption itemprop="caption description">'.$desc.'</figcaption>';
-		echo '</figure>';
+		$output .= '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">';
+		$output .= '<a href="'.$path.$name.'" itemprop="contentUrl" data-size="'.$width.'x'.$height.'">';
+		$output .= '<img src="'.$path.$name.'" itemprop="thumbnail" alt="Image description" />';
+		$output .= '</a>';
+		$output .= '<figcaption itemprop="caption description">'.$desc.'</figcaption>';
+		$output .= '</figure>';
 
 		//DATE
-		echo '<div class="row">';
-		echo '<div class="large-12 medium-12 small-12">';
-		echo '<i class="fa fa-calendar" aria-hidden="true"></i>';
-		echo '<p>'.$date.'</p>';
-		echo '</div></div>';
+		$output .= '<div class="row">';
+		$output .= '<div class="large-12 medium-12 small-12">';
+		$output .= '<i class="fa fa-calendar" aria-hidden="true"></i>';
+		$output .= '<p>'.$date.'</p>';
+		$output .= '</div></div>';
 
 		//CLOSE ALL	
-		echo '</div>';
+		$output .= '</div>';
+
 	}
+	$outputArray[] = $output;
+}
+
+$outputArray = array_reverse($outputArray);
+foreach ($outputArray as $line) {
+	echo $line;
 }
 ?>
 

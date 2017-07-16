@@ -1,5 +1,30 @@
+.gallery-banner {
+	background-image: url('../images/website/temp_main.jpg');
+	background-color: black;
+	height: 500px !important;
+	top: -80px;
+
+	.banner-link {
+		a {
+			font-size: 30px;
+			color: $blue;
+			border: 3px solid $blue;
+			border-radius: 15px;
+			padding-left: 10px;
+			letter-spacing: 10px;
+			background: rgba(39, 68, 138, 0.7);
+
+			&:hover {
+				color: $blue2;
+				border: 3px solid $blue2;
+			}
+		}
+	}
+}
+
 .main-gallery {
-	margin: 75px 0;
+	margin: 0;
+	margin-bottom: 75px;
 }
 
 .pswp__caption__center {
@@ -40,5 +65,9 @@
 
 	figcaption {
 		display: none;
+	}
+
+	.gallery-thumbnail {
+		margin: 10px 0;
 	}
 }
