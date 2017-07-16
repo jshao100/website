@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Foundation</title>
+		<title>James Shao</title>
 		<link rel="stylesheet" href="stylesheets/app.css" />
 		<link rel="stylesheet" href="bower_components/photoswipe/dist/photoswipe.css"/>
 		<link rel="stylesheet" href="bower_components/photoswipe/dist/default-skin/default-skin.css"/>		
