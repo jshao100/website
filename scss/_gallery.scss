@@ -1,0 +1,44 @@
+.main-gallery {
+	margin: 75px 0;
+}
+
+.pswp__caption__center {
+	font-size: 16px !important;
+	text-align: center !important;
+}
+
+.my-gallery {
+	width: 100%;
+	float: left;
+
+	p {
+		display: inline-block;
+		margin: 0;
+		margin-left: 10px;
+		font-size: 16px;
+		font-family: 'Source Sans Pro', sans-serif !important;
+		color: $gray2;
+		line-height: 35px;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	figure {
+		display: block;
+		//float: left;
+		margin: 0;
+		//width: 150px;
+
+		&:hover {
+			box-shadow: 3px 4px 5px #888888;
+			transform: scale(1.03, 1.03);
+		}
+	}
+
+	figcaption {
+		display: none;
+	}
+}
