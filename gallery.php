@@ -44,12 +44,14 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
 $outputArray = array();
+$imgHeight = array();
 
 $dir = new DirectoryIterator(dirname('./images/gallery/.'));
 foreach ($dir as $fileinfo) {
 	$output = "";
 	if (!$fileinfo->isDot()) {
 		$name = $fileinfo->getFilename();
+		if ($name == ".DS_Store")	continue;
 		$path = "./images/gallery/";
 		$size = getimagesize($fileinfo->getPathname());
 		$width = $size[0];
@@ -84,7 +86,7 @@ foreach ($dir as $fileinfo) {
 			$desc = "No Description Available";
 		} 
 
-		$output .=	'<div class="large-4 medium-4 small-12 columns left gallery-thumbnail">';
+		$output .=	'<div class="large-12 medium-12 small-12 gallery-thumbnail">';
 
 		//LOCATION
 		$output .= '<div class="row">';
@@ -113,12 +115,43 @@ foreach ($dir as $fileinfo) {
 
 	}
 	$outputArray[] = $output;
+	if ($width > $height) {
+		$imgHeight[] = 1;
+	} else {
+		$imgHeight[] = 2.5;
+	}
 }
 
+$leftCol = "<div class='large-4 medium-4 small-12 left columns'>";
+$midCol = "<div class='large-4 medium-4 small-12 center columns'>";
+$rightCol = "<div class='large-4 medium-4 small-12 right columns'>";
+
 $outputArray = array_reverse($outputArray);
+
+$imgHeight = array_reverse($imgHeight); //0 horizontal, 1 vertical
+$leftH = 0;
+$midH = 0;
+$rightH = 0;
+
+$i = 0;
 foreach ($outputArray as $line) {
-	echo $line;
+	if ($leftH <= $midH && $leftH <= $rightH) { //if left col is the least tall
+		$leftCol .= $line;	
+		$leftH += $imgHeight[$i];
+	}
+	else if ($midH <= $leftH && $midH <= $rightH) { //if mid col is least tall
+		$midCol .= $line;
+		$midH += $imgHeight[$i];
+	}
+	else {
+		$rightCol .= $line;
+		$rightH += $imgHeight[$i];
+	}
+	$i++;
 }
+echo $leftCol . "</div>";
+echo $midCol . "</div>";
+echo $rightCol . "</div>";
 ?>
 
 			</div>
