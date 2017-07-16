@@ -3,12 +3,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>James Shao</title>
-		<link rel="stylesheet" href="stylesheets/app.css" />
-		<link rel="stylesheet" href="bower_components/photoswipe/dist/photoswipe.css"/>
-		<link rel="stylesheet" href="bower_components/photoswipe/dist/default-skin/default-skin.css"/>		
+		<link rel="stylesheet" href="/stylesheets/app.css" />
+		<link rel="stylesheet" href="/bower_components/photoswipe/dist/photoswipe.css"/>
+		<link rel="stylesheet" href="/bower_components/photoswipe/dist/default-skin/default-skin.css"/>		
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
 		<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
-		<script src="bower_components/modernizr/modernizr.js"></script>
+		<script src="/bower_components/modernizr/modernizr.js"></script>
 	</head>
 	<body>
 
@@ -97,8 +97,8 @@ foreach ($dir as $fileinfo) {
 
 		//PHOTO
 		$output .= '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">';
-		$output .= '<a href="'.$path.$name.'" itemprop="contentUrl" data-size="'.$width.'x'.$height.'">';
-		$output .= '<img src="'.$path.$name.'" itemprop="thumbnail" alt="Image description" />';
+		$output .= '<a href="/'.$path.$name.'" itemprop="contentUrl" data-size="'.$width.'x'.$height.'">';
+		$output .= '<img src="/'.$path.$name.'" itemprop="thumbnail" alt="Image description" />';
 		$output .= '</a>';
 		$output .= '<figcaption itemprop="caption description">'.$desc.'</figcaption>';
 		$output .= '</figure>';
@@ -224,13 +224,13 @@ echo $rightCol . "</div>";
 
 <?php include 'footer.php'; ?>
 
-<script src="bower_components/foundation/js/vendor/jquery.js"></script>
-<script src="bower_components/foundation/js/vendor/fastclick.js"></script>
-<script src="bower_components/foundation/js/foundation.min.js"></script>
-<script src="bower_components/photoswipe/dist/photoswipe.min.js"></script> <!-- core js file -->
-<script src="bower_components/photoswipe/dist/photoswipe-ui-default.min.js"></script> <!-- ui js file -->
+<script src="/bower_components/foundation/js/vendor/jquery.js"></script>
+<script src="/bower_components/foundation/js/vendor/fastclick.js"></script>
+<script src="/bower_components/foundation/js/foundation.min.js"></script>
+<script src="/bower_components/photoswipe/dist/photoswipe.min.js"></script> <!-- core js file -->
+<script src="/bower_components/photoswipe/dist/photoswipe-ui-default.min.js"></script> <!-- ui js file -->
 <script src="https://use.fontawesome.com/cc84a4a3d6.js"></script>
-<script src="js/app.js"></script>
-<script src="js/gallery.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/gallery.js"></script>
 	</body>
 </html>

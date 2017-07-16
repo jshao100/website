@@ -4,9 +4,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>James Shao</title>
-		<link rel="stylesheet" href="stylesheets/app.css" />
+		<link rel="stylesheet" href="/stylesheets/app.css" />
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
-		<script src="bower_components/modernizr/modernizr.js"></script>
+		<script src="/bower_components/modernizr/modernizr.js"></script>
 	</head>
 	<body>
 		<?php include 'header.php'; ?>
@@ -81,7 +81,7 @@
 			<div class="resume">
 				<div class="row">
 					<div class="large-10 medium-10 small-12 large-push-1 medium-push 1 columns">
-						<img src="./images/website/resume-example.png" width=100% height=100%/>
+						<img src="/images/website/resume-example.png" width=100% height=100%/>
 					</div>
 				</div>
 			</div>
@@ -138,10 +138,10 @@
 
 		<?php include 'footer.php'; ?>
 
-		<script src="bower_components/foundation/js/vendor/jquery.js"></script>
-		<script src="bower_components/foundation/js/vendor/fastclick.js"></script>
-		<script src="bower_components/foundation/js/foundation.min.js"></script>
+		<script src="/bower_components/foundation/js/vendor/jquery.js"></script>
+		<script src="/bower_components/foundation/js/vendor/fastclick.js"></script>
+		<script src="/bower_components/foundation/js/foundation.min.js"></script>
 		<script src="https://use.fontawesome.com/cc84a4a3d6.js"></script>
-		<script src="js/app.js"></script>
+		<script src="/js/app.js"></script>
 	</body>
 </html>
