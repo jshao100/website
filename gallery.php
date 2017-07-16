@@ -21,14 +21,18 @@
 	<div class="banner gallery-banner">
 		<div class="row banner-text">
 			<h1>PORTFOLIO
+				<!--
 				<div class="banner-link" class="row">
 					<a href="#gear">GEAR</a>
 				</div>
+				-->
 			</h1>
 		</div>
+		<!--
 		<div class="banner-icon-main row banner-down">
 			<i class="banner-icon fa fa-angle-down" aria-hidden="true"></i>
 		</div>
+		-->
 	</div>
 
 	<!-- MAIN GALLERY -->
@@ -157,6 +161,32 @@ foreach ($outputArray as $line) {
 			</div>
 		</div>
 	</div>
+<!--
+	<div id="gear" class="separator">
+		<div class="row">
+			<hr/>
+		</div>
+	</div>
+
+	<div class="gear">
+		<div class="row gear-header">
+			<h2>Gear</h2>
+		</div>
+		<div class="row gear-content">
+			<div class="row gear-row">
+				<div class="large-5 medium-6 small-12 columns gear-image">
+
+				</div>
+				<div class="large-1 large-only columns"></div>
+				<div class="large-6 medium-6 small-12 columns gear-text">
+					<p>
+						
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
 </section>
 
 <?php include 'footer.php'; ?>

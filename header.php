@@ -28,7 +28,6 @@ if ($root) {
 			<li><a href="gallery.php">PHOTOGRAPHY</a></li>
 			<li><a href="#contact">CONTACT ME</a></li>';
 } else if ($gallery) {
-	echo "gallery is true";
 	echo '
 			<li><a href="index.php">ABOUT ME</a></li>
 			<li><a href="index.php#resume">RESUME</a></li>
@@ -36,7 +35,6 @@ if ($root) {
 			<li><a href="#" class="active">PHOTOGRAPHY</a></li>
 			<li><a href="index.php#contact">CONTACT ME</a></li>';
 } else {
-	echo "defaul";
 	echo '
 			<li><a href="index.php" class="active">ABOUT ME</a></li>
 			<li><a href="index.php#resume">RESUME</a></li>
