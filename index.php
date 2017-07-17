@@ -29,7 +29,7 @@
 				<div class="row">
 					<div class="row one-liner">
 						<div class="large-8 medium-8 small-12">
-							<h1>21 // Male // English</h1>
+							<h1>21 // Male // CompSci</h1>
 						</div>
 					</div>
 					<div class="row about-me-content">
