@@ -35,38 +35,28 @@
 					<div class="row about-me-content">
 						<div class="large-4 medium-4 small-12 columns show-for-medium-up">
 							<div class="about-me-brief">
-								<div class="row">
-									<p>Owner of a very grumpy cat</p>
-								</div>
-								<div class="row">
-									<p>Complete amateur photographer</p>
-								</div>
-								<div class="row">
-									<p>East Coaster stuck on the wrong coast</p>
-								</div>
-								<div class="row">
-									<p>When I say New York, I mean the city</p>
-								</div>
-								<div class="row">
-									<p>Vim >> Emacs and Nano</p>
-								</div>
-								<div class="row">
-									<p>Complete amateur photographer</p>
-								</div>
-								<div class="row">
-									<p>Avid PC gamer - find me @crisios</p>
-								</div>
-								<div class="row">
-									<p>At a loss for what else to write</p>
-								</div>
+<?php
+error_reporting(E_ERROR | E_PARSE);
+$handle = fopen("./about-me-list.txt", "r");
+if ($handle) {
+	while (($line = fgets($handle)) !== false) {
+		echo '<div class="row">';
+		echo '<p>' . $line . '</p>';
+		echo '</div>';	
+	}
+	fclose($handle);
+} else {
+} 
+?>
 							</div>
 						</div>
 						<div class="large-1 large-only columns"></div>
 						<div class="large-7 medium-8 small-12 columns">
 							<div class="about-me-text">
 								<p class="text-justify">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula nisl velit, vitae suscipit ante laoreet at. Mauris massa ante, vehicula at lacinia non, vehicula faucibus ligula. Integer porttitor, est eget elementum aliquam, velit mi iaculis risus, at laoreet urna lacus eu dolor. Fusce libero velit, ornare ac pharetra et, commodo ut justo. Nam malesuada imperdiet molestie. Aliquam viverra tincidunt sodales. Nulla condimentum ex eget ligula viverra consectetur. In posuere nisl felis, sed ultrices nunc varius ac. Ut vulputate tincidunt fermentum. Nam vel ex ultrices, lacinia tortor non, lobortis quam. Nullam in sapien sed diam malesuada accumsan quis ac risus. Aenean consequat aliquam nisi, sit amet feugiat tortor pellentesque ac. Nam accumsan massa est, nec cursus libero cursus in. Pellentesque vestibulum ut arcu sed consectetur. Vestibulum ex libero, consectetur vitae feugiat eu, tincidunt sit amet neque. Maecenas in nulla lorem.</p>
-							</div>
+									<?php include 'about-me.txt'; ?>
+								</p>
+						</div>
 						</div>
 					</div>
 				</div>

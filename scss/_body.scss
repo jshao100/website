@@ -93,12 +93,27 @@
 
 	.about-me {
 		margin-bottom: 75px;
+		
+		.about-me-brief {
+			p {
+				font-style: italic;
+				margin-bottom: 40px !important;
+			}
+		}
 
 		.about-me-content {
 			p {
 				font-size: 18px;
 				line-height: 40px;
 				margin-bottom: 0px;
+
+				a {
+					color: $red;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
 			}
 
 			.about-me-text {
