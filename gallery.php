@@ -24,15 +24,15 @@
 				<!--
 				<div class="banner-link" class="row">
 					<a href="#gear">GEAR</a>
-				</div>
-				-->
+					</div>
+					-->
 			</h1>
 		</div>
 		<!--
 		<div class="banner-icon-main row banner-down">
 			<i class="banner-icon fa fa-angle-down" aria-hidden="true"></i>
-		</div>
-		-->
+			</div>
+			-->
 	</div>
 
 	<!-- MAIN GALLERY -->
@@ -42,50 +42,8 @@
 			<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
 <?php
-error_reporting(E_ERROR | E_PARSE);
-$outputArray = array();
-$imgHeight = array();
 
-$dir = new DirectoryIterator(dirname('./images/gallery/.'));
-foreach ($dir as $fileinfo) {
-	$output = "";
-	if (!$fileinfo->isDot()) {
-		$name = $fileinfo->getFilename();
-		if ($name == ".DS_Store")	continue;
-		$path = "./images/gallery/";
-		$size = getimagesize($fileinfo->getPathname());
-		$width = $size[0];
-		$height = $size[1];
-
-		$location;
-		$date;
-		$desc;
-
-		//open description file
-		$descPath = "./images/info/";
-		$descFile = pathinfo($fileinfo->getPathname())['filename'] . ".txt";
-		$handle = fopen($descPath.$descFile, "r");
-		$i = 0;
-		if ($handle) {
-			while (($line = fgets($handle)) !== false) {
-				// process the line read.
-				if ($i == 0) {
-					$location = $line;
-				} else if ($i == 1) {
-					$date = $line;
-				} else {
-					$desc = $line;
-				}
-				$i++;
-			}
-			fclose($handle);
-		} else {
-			// error opening the file.
-			$location = "N/A";
-			$date = "N/A";
-			$desc = "No Description Available";
-		} 
-
+function createOutput($location, $width, $height, $filename, $date, $desc) {
 		$output .=	'<div class="large-12 medium-12 small-12 gallery-thumbnail">';
 
 		//LOCATION
@@ -97,8 +55,8 @@ foreach ($dir as $fileinfo) {
 
 		//PHOTO
 		$output .= '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">';
-		$output .= '<a href="/'.$path.$name.'" itemprop="contentUrl" data-size="'.$width.'x'.$height.'">';
-		$output .= '<img src="/'.$path.$name.'" itemprop="thumbnail" alt="Image description" />';
+		$output .= '<a href="/'.$filename.'" itemprop="contentUrl" data-size="'.$width.'x'.$height.'">';
+		$output .= '<img src="/'.$filename.'" itemprop="thumbnail" alt="Image description" />';
 		$output .= '</a>';
 		$output .= '<figcaption itemprop="caption description">'.$desc.'</figcaption>';
 		$output .= '</figure>';
@@ -113,42 +71,97 @@ foreach ($dir as $fileinfo) {
 		//CLOSE ALL	
 		$output .= '</div>';
 
-	}
-	$outputArray[] = $output;
-	if ($width > $height) {
-		$imgHeight[] = 1;
-	} else {
-		$imgHeight[] = 2.5;
+		return $output;
+}
+
+error_reporting(E_ERROR | E_PARSE);
+$outputArray = array();
+$imgHeight = array();
+
+$dir = new DirectoryIterator(dirname('./images/gallery/.'));
+$dirList = array();
+foreach ($dir as $fileinfo) {
+	if (!$fileinfo->isDot()) {
+		if ($fileinfo->getFilename() !== '.DS_Store') {
+			$dirList[] = $fileinfo->getFilename();
+		}
 	}
 }
 
+//sort list of files, reverse order
+rsort($dirList);
+
+//needed vars
 $leftCol = "<div class='large-4 medium-4 small-12 left columns'>";
 $midCol = "<div class='large-4 medium-4 small-12 center columns'>";
 $rightCol = "<div class='large-4 medium-4 small-12 right columns'>";
 
-$outputArray = array_reverse($outputArray);
-
-$imgHeight = array_reverse($imgHeight); //0 horizontal, 1 vertical
+//heights
 $leftH = 0;
 $midH = 0;
 $rightH = 0;
 
-$i = 0;
-foreach ($outputArray as $line) {
+//iterate through and get info
+foreach ($dirList as $filename) {
+	//get image data	
+	$img = "./images/gallery/" . $filename;
+	$size = getimagesize($img);
+	$width = $size[0];
+	$height = $size[1];
+
+	//get image information
+	$location;
+	$date;
+	$desc;
+
+	//open description file
+	$descPath = "./images/info/" . str_replace(".jpg","",$filename) . ".txt";
+
+	$handle = fopen($descPath, "r");
+	$i = 0;
+	if ($handle) {
+		while (($line = fgets($handle)) !== false) {
+			// process the line read.
+			if ($i == 0) {
+				$location = $line;
+			} else if ($i == 1) {
+				$date = $line;
+			} else {
+				$desc = $line;
+			}
+			$i++;
+		}
+		fclose($handle);
+	} else {
+		// error opening the file.
+		$location = "N/A";
+		$date = "N/A";
+		$desc = "No Description Available";
+	} 
+		
+	$output = createOutput($location, $width, $height, $img, $date, $desc);
+
+	$imgHeight;
+	if ($width > $height) {
+		$imgHeight = 1;
+	} else {
+		$imgHeight = 2.5;
+	}
+	
 	if ($leftH <= $midH && $leftH <= $rightH) { //if left col is the least tall
-		$leftCol .= $line;	
-		$leftH += $imgHeight[$i];
+		$leftCol .= $output;	
+		$leftH += $imgHeight;
 	}
 	else if ($midH <= $leftH && $midH <= $rightH) { //if mid col is least tall
-		$midCol .= $line;
-		$midH += $imgHeight[$i];
+		$midCol .= $output;
+		$midH += $imgHeight;
 	}
 	else {
-		$rightCol .= $line;
-		$rightH += $imgHeight[$i];
-	}
-	$i++;
+		$rightCol .= $output;
+		$rightH += $imgHeight;
+	}	
 }
+
 echo $leftCol . "</div>";
 echo $midCol . "</div>";
 echo $rightCol . "</div>";
@@ -194,32 +207,32 @@ echo $rightCol . "</div>";
 			</div>
 		</div>
 	</div>
-<!--
+	<!--
 	<div id="gear" class="separator">
 		<div class="row">
 			<hr/>
-		</div>
-	</div>
-
-	<div class="gear">
-		<div class="row gear-header">
-			<h2>Gear</h2>
-		</div>
-		<div class="row gear-content">
-			<div class="row gear-row">
-				<div class="large-5 medium-6 small-12 columns gear-image">
-
-				</div>
-				<div class="large-1 large-only columns"></div>
-				<div class="large-6 medium-6 small-12 columns gear-text">
-					<p>
-						
-					</p>
-				</div>
 			</div>
 		</div>
-	</div>
-	-->
+
+		<div class="gear">
+			<div class="row gear-header">
+				<h2>Gear</h2>
+				</div>
+				<div class="row gear-content">
+					<div class="row gear-row">
+						<div class="large-5 medium-6 small-12 columns gear-image">
+
+						</div>
+						<div class="large-1 large-only columns"></div>
+							<div class="large-6 medium-6 small-12 columns gear-text">
+								<p>
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				-->
 </section>
 
 <?php include 'footer.php'; ?>
