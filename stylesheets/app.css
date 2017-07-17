@@ -9871,8 +9871,9 @@ th.hide-for-touch {
 /* line 81, ../scss/_body.scss */
 .main .one-liner > div {
   margin: 75px auto;
+  margin-top: 0px;
 }
-/* line 84, ../scss/_body.scss */
+/* line 85, ../scss/_body.scss */
 .main .one-liner > div h1 {
   color: #1b1b1d;
   font-family: 'Source Sans Pro', sans-serif !important;
@@ -9880,34 +9881,34 @@ th.hide-for-touch {
   font-size: 40px;
   line-height: 40px;
 }
-/* line 94, ../scss/_body.scss */
+/* line 95, ../scss/_body.scss */
 .main .about-me {
   margin-bottom: 75px;
 }
-/* line 98, ../scss/_body.scss */
+/* line 99, ../scss/_body.scss */
 .main .about-me .about-me-brief p {
   font-style: italic;
   margin-bottom: 40px !important;
 }
-/* line 105, ../scss/_body.scss */
+/* line 106, ../scss/_body.scss */
 .main .about-me .about-me-content p {
   font-size: 18px;
   line-height: 40px;
   margin-bottom: 0px;
 }
-/* line 110, ../scss/_body.scss */
+/* line 111, ../scss/_body.scss */
 .main .about-me .about-me-content p a {
   color: #771313;
 }
-/* line 113, ../scss/_body.scss */
+/* line 114, ../scss/_body.scss */
 .main .about-me .about-me-content p a:hover {
   text-decoration: underline;
 }
-/* line 126, ../scss/_body.scss */
+/* line 127, ../scss/_body.scss */
 .main .resume {
   margin: 50px 0px;
 }
-/* line 130, ../scss/_body.scss */
+/* line 131, ../scss/_body.scss */
 .main .separator hr {
   border: solid #1b1b1d;
   border-width: 1px 0 0;
@@ -9915,20 +9916,20 @@ th.hide-for-touch {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 138, ../scss/_body.scss */
+/* line 139, ../scss/_body.scss */
 .main .contact {
   margin: 50px 0;
 }
-/* line 141, ../scss/_body.scss */
+/* line 142, ../scss/_body.scss */
 .main .contact .contact-header {
   margin-bottom: 50px;
 }
-/* line 144, ../scss/_body.scss */
+/* line 145, ../scss/_body.scss */
 .main .contact .contact-header h1 {
   font-family: 'Source Sans Pro', sans-serif !important;
   text-align: center;
 }
-/* line 151, ../scss/_body.scss */
+/* line 152, ../scss/_body.scss */
 .main .contact .contact-content .submit {
   font-family: 'Source Sans Pro', sans-serif !important;
   font-size: 14px;
@@ -9938,7 +9939,7 @@ th.hide-for-touch {
   border: 1px solid #cccccc;
   border-radius: 20px;
 }
-/* line 160, ../scss/_body.scss */
+/* line 161, ../scss/_body.scss */
 .main .contact .contact-content .submit:hover {
   border-color: #999999;
 }
