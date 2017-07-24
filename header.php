@@ -24,14 +24,14 @@ if ($root) {
 	echo '
 			<li><a href="#" class="active">ABOUT ME</a></li>
 			<li><a href="#resume">RESUME</a></li>
-			<li><a href="#">PROJECTS</a></li>
+			<li><a href="projects">PROJECTS</a></li>
 			<li><a href="gallery">PHOTOGRAPHY</a></li>
 			<li><a href="#contact">CONTACT ME</a></li>';
 } else if ($gallery) {
 	echo '
 			<li><a href="/">ABOUT ME</a></li>
 			<li><a href="/#resume">RESUME</a></li>
-			<li><a href="#">PROJECTS</a></li>
+			<li><a href="projects">PROJECTS</a></li>
 			<li><a href="#" class="active">PHOTOGRAPHY</a></li>
 			<li><a href="/#contact">CONTACT ME</a></li>';
 } else {

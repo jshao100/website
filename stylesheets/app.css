@@ -9796,26 +9796,30 @@ th.hide-for-touch {
   color: #2c2b2b;
 }
 /* line 12, ../scss/_body.scss */
+.main .project-banner {
+  background-image: url("../images/website/project-banner.jpg");
+}
+/* line 16, ../scss/_body.scss */
 .main .resume-banner {
   background-image: url("../images/website/resume-banner.jpg");
 }
-/* line 15, ../scss/_body.scss */
+/* line 19, ../scss/_body.scss */
 .main .resume-banner h1 {
   top: 150px !important;
   color: #100f0f !important;
   font-size: 75px !important;
 }
-/* line 22, ../scss/_body.scss */
+/* line 26, ../scss/_body.scss */
 .main .main-banner {
   background-image: url("../images/website/main-banner.jpg");
   background-color: black;
   top: -80px;
 }
-/* line 27, ../scss/_body.scss */
+/* line 31, ../scss/_body.scss */
 .main .main-banner h1 {
   text-align: left !important;
 }
-/* line 32, ../scss/_body.scss */
+/* line 36, ../scss/_body.scss */
 .main .banner {
   background-attachment: fixed;
   background-size: 100%;
@@ -9824,28 +9828,28 @@ th.hide-for-touch {
   width: 100%;
 }
 @media only screen and (min-width: 64.0625em) and (max-width: 90em) {
-  /* line 32, ../scss/_body.scss */
+  /* line 36, ../scss/_body.scss */
   .main .banner {
     height: 100vh;
   }
 }
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-  /* line 32, ../scss/_body.scss */
+  /* line 36, ../scss/_body.scss */
   .main .banner {
     height: 500px;
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 32, ../scss/_body.scss */
+  /* line 36, ../scss/_body.scss */
   .main .banner {
     height: 250px;
   }
 }
-/* line 49, ../scss/_body.scss */
+/* line 53, ../scss/_body.scss */
 .main .banner .banner-icon-main {
   text-align: center;
 }
-/* line 52, ../scss/_body.scss */
+/* line 56, ../scss/_body.scss */
 .main .banner .banner-icon-main .banner-icon {
   color: #f4e8e8;
   font-size: 70px;
@@ -9855,7 +9859,7 @@ th.hide-for-touch {
   margin-left: -22px;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 63, ../scss/_body.scss */
+  /* line 67, ../scss/_body.scss */
   .main .banner h1 {
     font-size: 100px;
     top: 180px;
@@ -9864,7 +9868,7 @@ th.hide-for-touch {
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 71, ../scss/_body.scss */
+  /* line 75, ../scss/_body.scss */
   .main .banner h1 {
     top: 100px;
     font-size: 50px;
@@ -9872,19 +9876,19 @@ th.hide-for-touch {
     line-height: 50px;
   }
 }
-/* line 79, ../scss/_body.scss */
+/* line 83, ../scss/_body.scss */
 .main .banner h1 {
   letter-spacing: 10px;
   color: #f4e8e8;
   position: relative;
   text-align: center;
 }
-/* line 88, ../scss/_body.scss */
+/* line 92, ../scss/_body.scss */
 .main .one-liner > div {
   margin: 75px auto;
   margin-top: 0px;
 }
-/* line 92, ../scss/_body.scss */
+/* line 96, ../scss/_body.scss */
 .main .one-liner > div h1 {
   color: #1b1b1d;
   font-family: 'Source Sans Pro', sans-serif !important;
@@ -9892,34 +9896,34 @@ th.hide-for-touch {
   font-size: 40px;
   line-height: 40px;
 }
-/* line 102, ../scss/_body.scss */
+/* line 106, ../scss/_body.scss */
 .main .about-me {
   margin-bottom: 75px;
 }
-/* line 106, ../scss/_body.scss */
+/* line 110, ../scss/_body.scss */
 .main .about-me .about-me-brief p {
   font-style: italic;
   margin-bottom: 40px !important;
 }
-/* line 113, ../scss/_body.scss */
+/* line 117, ../scss/_body.scss */
 .main .about-me .about-me-content p {
   font-size: 18px;
   line-height: 40px;
   margin-bottom: 0px;
 }
-/* line 118, ../scss/_body.scss */
+/* line 122, ../scss/_body.scss */
 .main .about-me .about-me-content p a {
   color: #771313;
 }
-/* line 121, ../scss/_body.scss */
+/* line 125, ../scss/_body.scss */
 .main .about-me .about-me-content p a:hover {
   text-decoration: underline;
 }
-/* line 134, ../scss/_body.scss */
+/* line 138, ../scss/_body.scss */
 .main .resume {
   margin: 50px 0px;
 }
-/* line 138, ../scss/_body.scss */
+/* line 142, ../scss/_body.scss */
 .main .separator hr {
   border: solid #1b1b1d;
   border-width: 1px 0 0;
@@ -9927,20 +9931,20 @@ th.hide-for-touch {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 146, ../scss/_body.scss */
+/* line 150, ../scss/_body.scss */
 .main .contact {
   margin: 50px 0;
 }
-/* line 149, ../scss/_body.scss */
+/* line 153, ../scss/_body.scss */
 .main .contact .contact-header {
   margin-bottom: 50px;
 }
-/* line 152, ../scss/_body.scss */
+/* line 156, ../scss/_body.scss */
 .main .contact .contact-header h1 {
   font-family: 'Source Sans Pro', sans-serif !important;
   text-align: center;
 }
-/* line 159, ../scss/_body.scss */
+/* line 163, ../scss/_body.scss */
 .main .contact .contact-content .submit {
   font-family: 'Source Sans Pro', sans-serif !important;
   font-size: 14px;
@@ -9950,7 +9954,7 @@ th.hide-for-touch {
   border: 1px solid #cccccc;
   border-radius: 20px;
 }
-/* line 168, ../scss/_body.scss */
+/* line 172, ../scss/_body.scss */
 .main .contact .contact-content .submit:hover {
   border-color: #999999;
 }
@@ -10090,4 +10094,35 @@ th.hide-for-touch {
 /* line 76, ../scss/_gallery.scss */
 .my-gallery .gallery-thumbnail {
   margin: 10px 0;
+}
+
+/* line 1, ../scss/_project.scss */
+.project-banner {
+  height: 250px !important;
+  background-color: #100f0f;
+  margin-bottom: 50px;
+}
+/* line 6, ../scss/_project.scss */
+.project-banner .banner-text h1 {
+  font-size: 50px !important;
+  top: 80px !important;
+}
+
+/* line 12, ../scss/_project.scss */
+.project-list {
+  margin-bottom: 50px;
+}
+/* line 15, ../scss/_project.scss */
+.project-list .project {
+  margin: 0 auto;
+}
+/* line 18, ../scss/_project.scss */
+.project-list .project a {
+  display: block;
+  background: #2c2b2b;
+  color: #f4e8e8;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 15px 0;
 }
