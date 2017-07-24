@@ -1,6 +1,8 @@
 .top-bar {
 	z-index: 1;
-	background-color: $black;
+	//background-color: $black;
+	background-color: white;
+	opacity: 0.9;
 	height: 80px;
 	padding-top: 25px; //80 - 30 / 2
 	padding-bottom: 25px;
@@ -13,9 +15,11 @@
 
 	p, a {
 		line-height: 30px !important;
-		background-color: $black !important;
+		//background-color: $black !important;
+		background-color: white !important;
 		font-family: 'Source Sans Pro', sans-serif !important;
-		color: $white;
+		//color: $white;
+		color: rgba(10, 10, 10, 1.0);
 	}
 
 	p {
@@ -26,11 +30,13 @@
 	a {
 		font-weight: 700 !important;
 		font-size: 17px !important;
-		color: rgba(243, 232, 232, 0.7) !important;
+		//color: rgba(243, 232, 232, 0.7) !important;
+		color: rgba(10, 10, 10, 0.7) !important;
 
 		&.active, &:hover {
 			//border-bottom: 2px solid $white;
-			color: rgba(243, 232, 232, 1.0) !important;
+			//color: rgba(243, 232, 232, 1.0) !important;
+			color: rgba(10, 10, 10, 1.0) !important;
 
 			&:after {
 				content : "";
@@ -39,7 +45,7 @@
 				left    : -8%;
 				height  : 1px;
 				width   : 116%;  /* or 100px */
-				border-bottom:2px solid $white;
+				border-bottom:2px solid rgba(10, 10, 10, 1.0);
 			}
 		}
 	}

@@ -1,7 +1,0 @@
-Hi there, I'm James. Welcome to my (not Bootstrap) website! If you're one of my friends, I only beg you to go easy on the contact form.
-</br></br>
-I am a Senior at Purdue University, completing my B.S in Computer Science specializing in Software Engineering and Machine Intelligence. I also have a minor in Psychology which usually evokes an "oh that's cool" comment before moving on instantly.
-</br></br>
-Throughout my 21 years, I have found that I really enjoy food; whether it be exploring various restaurants or busying myself in the kitchen and experimenting on my roommates' palates. If you need someone to spend too much at a restaurant with you, I'm the one to ask.
-</br></br>
-If staying in bed were an olympic sport, I would probably be in the top 0.01% of the population. When I'm not lazing around, I am probably following my cat around attempting to photograph him. I've recently taken up photography as a hobby so feel free to check out my <a href="gallery/">gallery</a>. 

@@ -37,7 +37,7 @@
 							<div class="about-me-brief">
 <?php
 error_reporting(E_ERROR | E_PARSE);
-$handle = fopen("./about-me-list.txt", "r");
+$handle = fopen("./text/about-me-list.txt", "r");
 if ($handle) {
 	while (($line = fgets($handle)) !== false) {
 		echo '<div class="row">';
@@ -54,7 +54,7 @@ if ($handle) {
 						<div class="large-7 medium-8 small-12 columns">
 							<div class="about-me-text">
 								<p class="text-justify">
-									<?php include 'about-me.txt'; ?>
+									<?php include './text/about-me.txt'; ?>
 								</p>
 						</div>
 						</div>

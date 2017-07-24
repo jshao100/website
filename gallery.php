@@ -21,11 +21,9 @@
 	<div class="banner gallery-banner">
 		<div class="row banner-text">
 			<h1>PORTFOLIO
-				<!--
-				<div class="banner-link" class="row">
-					<a href="#gear">GEAR</a>
-					</div>
-					-->
+			<div class="banner-link" class="row">
+				<a target="_blank" href="https://flic.kr/s/aHsm58jQ5H">Download</a>
+			</div>
 			</h1>
 		</div>
 		<!--
@@ -43,38 +41,150 @@
 
 <?php
 
-function createOutput($location, $width, $height, $filename, $date, $desc) {
-		$output .=	'<div class="large-12 medium-12 small-12 gallery-thumbnail">';
+//variables
+$user_id = "37004245%40N08";
+$api_key = "0172718a50c4b8d771cc90b648bb27ba";
+$album = "72157686677766545";
 
-		//LOCATION
-		$output .= '<div class="row">';
-		$output .= '<div class="large-12 medium-12 small-12">';
-		$output .= '<i class="fa fa-map-marker" aria-hidden="true"></i>';
-		$output .= '<p>'.$location.'</p>';
-		$output .= '</div></div>';
+function createOutput($photo_id, $location, $desc, $date) {
 
-		//PHOTO
-		$output .= '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">';
-		$output .= '<a href="/'.$filename.'" itemprop="contentUrl" data-size="'.$width.'x'.$height.'">';
-		$output .= '<img src="/'.$filename.'" itemprop="thumbnail" alt="Image description" />';
-		$output .= '</a>';
-		$output .= '<figcaption itemprop="caption description">'.$desc.'</figcaption>';
-		$output .= '</figure>';
+	$url = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=".$GLOBALS['api_key']."&photo_id=".$photo_id."&format=json&nojsoncallback=1";
+	$json2 = json_decode(file_get_contents($url), true);
 
-		//DATE
-		$output .= '<div class="row">';
-		$output .= '<div class="large-12 medium-12 small-12">';
-		$output .= '<i class="fa fa-calendar" aria-hidden="true"></i>';
-		$output .= '<p>'.$date.'</p>';
-		$output .= '</div></div>';
+	$width;
+	$height;
+	$src;
+	$original_src;
 
-		//CLOSE ALL	
-		$output .= '</div>';
+	$sizes = $json2['sizes']['size'];
+	for ($j = 0; $j < count($sizes); $j++) {
+		$size_type = $sizes[$j]['label'];
 
-		return $output;
+		//get variables
+		if ($size_type === "Large") {
+			$width = $sizes[$j]['width'];
+			$height = $sizes[$j]['height'];
+			$src = $sizes[$j]['source'];
+		}
+	}
+
+	$output .=	'<div class="large-12 medium-12 small-12 gallery-thumbnail">';
+
+	//LOCATION
+	$output .= '<div class="row">';
+	$output .= '<div class="large-12 medium-12 small-12">';
+	$output .= '<i class="fa fa-map-marker" aria-hidden="true"></i>';
+	$output .= '<p>'.$location.'</p>';
+	$output .= '</div></div>';
+
+	//PHOTO
+	$output .= '<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">';
+	$output .= '<a href="'.$src.'" itemprop="contentUrl" data-size="'.$width.'x'.$height.'">';
+	$output .= '<img src="'.$src.'" itemprop="thumbnail" alt="Image description" />';
+	$output .= '</a>';
+	$output .= '<figcaption itemprop="caption description">'.$desc.'</figcaption>';
+	$output .= '</figure>';
+
+	//DATE
+	$output .= '<div class="row">';
+	$output .= '<div class="large-12 medium-12 small-12">';
+	$output .= '<i class="fa fa-calendar" aria-hidden="true"></i>';
+	$output .= '<p>'.$date.'</p>';
+	$output .= '</div></div>';
+
+	//CLOSE ALL	
+	$output .= '</div>';
+
+	if ($width > $height) { //horizontal
+		return array($output, 1);
+	}
+	else if ($width == $height) { //square
+		return array($output, 2);
+	}
+	else { //vertical
+		return array($output, 2.5);
+	}
+}
+
+function getDescription($title) {
+	//get image information
+	$location;
+	$date;
+	$desc;
+
+	//open description file
+	$descPath = "./images/info/" . $title . ".txt";
+
+	$handle = fopen($descPath, "r");
+	$i = 0;
+	if ($handle) {
+		while (($line = fgets($handle)) !== false) {
+			// process the line read.
+			if ($i == 0) {
+				$location = $line;
+			} else if ($i == 1) {
+				$date = $line;
+			} else {
+				$desc = $line;
+			}
+			$i++;
+		}
+		fclose($handle);
+	} else {
+		// error opening the file.
+		$location = "N/A (" . $title . ")";
+		$date = "N/A";
+		$desc = "No Description Available";
+	}
+	return array($location, $desc, $date);
 }
 
 error_reporting(E_ERROR | E_PARSE);
+
+//call url get json
+$url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key='.$api_key.'&photoset_id='.$album.'&user_id='.$user_id.'&format=json&nojsoncallback=1';
+
+$json = json_decode(file_get_contents($url), true);
+$photos = $json['photoset']['photo'];
+
+//needed vars
+$leftCol = "<div class='large-4 medium-4 small-12 left columns'>";
+$midCol = "<div class='large-4 medium-4 small-12 center columns'>";
+$rightCol = "<div class='large-4 medium-4 small-12 right columns'>";
+
+//heights
+$leftH = 0;
+$midH = 0;
+$rightH = 0;
+
+for ($i = 0; $i < count($photos); $i++) {
+	$photo_id =	$photos[$i]["id"];
+	$title = $photos[$i]['title'];
+
+	//get specific information
+	$desc = getDescription($title);
+	$output = createOutput($photo_id, $desc[0], $desc[1], $desc[2]);
+	
+	if ($leftH <= $midH && $leftH <= $rightH) { //if left col is the least tall
+		$leftCol .= $output[0];	
+		$leftH += $output[1];
+	}
+	else if ($midH <= $leftH && $midH <= $rightH) { //if mid col is least tall
+		$midCol .= $output[0];
+		$midH += $output[1];
+	}
+	else {
+		$rightCol .= $output[0];
+		$rightH += $output[1];
+	}	
+}
+
+echo $leftCol . "</div>";
+echo $midCol . "</div>";
+echo $rightCol . "</div>";
+
+
+/*
 $outputArray = array();
 $imgHeight = array();
 
@@ -138,7 +248,7 @@ foreach ($dirList as $filename) {
 		$date = "N/A";
 		$desc = "No Description Available";
 	} 
-		
+
 	$output = createOutput($location, $width, $height, $img, $date, $desc);
 
 	$imgHeight;
@@ -147,7 +257,7 @@ foreach ($dirList as $filename) {
 	} else {
 		$imgHeight = 2.5;
 	}
-	
+
 	if ($leftH <= $midH && $leftH <= $rightH) { //if left col is the least tall
 		$leftCol .= $output;	
 		$leftH += $imgHeight;
@@ -165,6 +275,7 @@ foreach ($dirList as $filename) {
 echo $leftCol . "</div>";
 echo $midCol . "</div>";
 echo $rightCol . "</div>";
+ */
 ?>
 
 			</div>
