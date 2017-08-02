@@ -20,7 +20,7 @@
 					<h1>SHAO</h1>
 				</div>
 				<div class="banner-icon-main row banner-down">
-					<i class="banner-icon fa fa-angle-down" aria-hidden="true"></i>
+					<i class="banner-icon fa fa-angle-down show-for-medium-up" aria-hidden="true"></i>
 				</div>
 			</div>
 

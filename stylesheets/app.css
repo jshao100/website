@@ -9750,6 +9750,10 @@ th.hide-for-touch {
     padding-left: 10px;
   }
 }
+/* line 9, ../scss/_header.scss */
+.top-bar .title-area .name p {
+  padding-left: 10px;
+}
 @media only screen and (min-width: 64.0625em) and (max-width: 90em) {
   /* line 1, ../scss/_header.scss */
   .top-bar {
@@ -9757,29 +9761,29 @@ th.hide-for-touch {
     padding-right: 3rem;
   }
 }
-/* line 24, ../scss/_header.scss */
+/* line 27, ../scss/_header.scss */
 .top-bar p, .top-bar a {
   line-height: 30px !important;
   background-color: white !important;
   font-family: 'Source Sans Pro', sans-serif !important;
   color: #0a0a0a;
 }
-/* line 33, ../scss/_header.scss */
+/* line 36, ../scss/_header.scss */
 .top-bar p {
   font-weight: 300 !important;
   font-size: 15px !important;
 }
-/* line 38, ../scss/_header.scss */
+/* line 41, ../scss/_header.scss */
 .top-bar a {
   font-weight: 700 !important;
   font-size: 17px !important;
   color: rgba(10, 10, 10, 0.7) !important;
 }
-/* line 44, ../scss/_header.scss */
+/* line 47, ../scss/_header.scss */
 .top-bar a.active, .top-bar a:hover {
   color: #0a0a0a !important;
 }
-/* line 49, ../scss/_header.scss */
+/* line 52, ../scss/_header.scss */
 .top-bar a.active:after, .top-bar a:hover:after {
   content: "";
   display: block;
@@ -9790,33 +9794,34 @@ th.hide-for-touch {
   /* or 100px */
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 49, ../scss/_header.scss */
+  /* line 52, ../scss/_header.scss */
   .top-bar a.active:after, .top-bar a:hover:after {
     border-bottom: 2px solid #0a0a0a;
   }
 }
-/* line 66, ../scss/_header.scss */
+/* line 69, ../scss/_header.scss */
 .top-bar .toggle-topbar.menu-icon {
   top: 35%;
 }
-/* line 69, ../scss/_header.scss */
+/* line 72, ../scss/_header.scss */
 .top-bar .toggle-topbar.menu-icon a span::after {
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.7), 0 7px 0 1px rgba(10, 10, 10, 0.7), 0 14px 0 1px rgba(10, 10, 10, 0.7);
 }
-/* line 74, ../scss/_header.scss */
-.top-bar.expanded {
-  margin-bottom: 80px;
-}
 /* line 77, ../scss/_header.scss */
+.top-bar.expanded {
+  opacity: 1;
+  background: white;
+}
+/* line 82, ../scss/_header.scss */
 .top-bar.expanded .title-area {
   background: white;
 }
-/* line 81, ../scss/_header.scss */
+/* line 86, ../scss/_header.scss */
 .top-bar.expanded .top-bar-section ul li > a {
   padding: 0px;
   padding-left: 10px;
 }
-/* line 85, ../scss/_header.scss */
+/* line 90, ../scss/_header.scss */
 .top-bar.expanded .top-bar-section ul li > a:hover {
   text-decoration: underline;
 }
@@ -9841,7 +9846,7 @@ th.hide-for-touch {
 }
 /* line 19, ../scss/_body.scss */
 .main .resume-banner h1 {
-  top: 150px !important;
+  top: 150px;
   color: #100f0f !important;
   font-size: 75px !important;
 }
@@ -9868,6 +9873,7 @@ th.hide-for-touch {
   /* line 36, ../scss/_body.scss */
   .main .banner {
     height: 500px;
+    padding-left: 10px;
   }
 }
 @media only screen and (max-width: 40em) {
@@ -9878,11 +9884,11 @@ th.hide-for-touch {
     padding-right: 10px;
   }
 }
-/* line 54, ../scss/_body.scss */
+/* line 55, ../scss/_body.scss */
 .main .banner .banner-icon-main {
   text-align: center;
 }
-/* line 57, ../scss/_body.scss */
+/* line 58, ../scss/_body.scss */
 .main .banner .banner-icon-main .banner-icon {
   color: #f4e8e8;
   font-size: 70px;
@@ -9892,7 +9898,7 @@ th.hide-for-touch {
   margin-left: -22px;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 68, ../scss/_body.scss */
+  /* line 69, ../scss/_body.scss */
   .main .banner h1 {
     font-size: 100px;
     top: 180px;
@@ -9901,7 +9907,7 @@ th.hide-for-touch {
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 76, ../scss/_body.scss */
+  /* line 77, ../scss/_body.scss */
   .main .banner h1 {
     letter-spacing: 5px !important;
     top: 100px;
@@ -9910,19 +9916,19 @@ th.hide-for-touch {
     line-height: 50px;
   }
 }
-/* line 85, ../scss/_body.scss */
+/* line 86, ../scss/_body.scss */
 .main .banner h1 {
   letter-spacing: 10px;
   color: #f4e8e8;
   position: relative;
   text-align: center;
 }
-/* line 94, ../scss/_body.scss */
+/* line 95, ../scss/_body.scss */
 .main .one-liner > div {
   margin: 75px auto;
   margin-top: 0px;
 }
-/* line 98, ../scss/_body.scss */
+/* line 99, ../scss/_body.scss */
 .main .one-liner > div h1 {
   color: #1b1b1d;
   font-family: 'Source Sans Pro', sans-serif !important;
@@ -9930,34 +9936,34 @@ th.hide-for-touch {
   font-size: 40px;
   line-height: 40px;
 }
-/* line 108, ../scss/_body.scss */
+/* line 109, ../scss/_body.scss */
 .main .about-me {
   margin-bottom: 75px;
 }
-/* line 112, ../scss/_body.scss */
+/* line 113, ../scss/_body.scss */
 .main .about-me .about-me-brief p {
   font-style: italic;
   margin-bottom: 40px !important;
 }
-/* line 119, ../scss/_body.scss */
+/* line 120, ../scss/_body.scss */
 .main .about-me .about-me-content p {
   font-size: 18px;
   line-height: 40px;
   margin-bottom: 0px;
 }
-/* line 124, ../scss/_body.scss */
+/* line 125, ../scss/_body.scss */
 .main .about-me .about-me-content p a {
   color: #771313;
 }
-/* line 127, ../scss/_body.scss */
+/* line 128, ../scss/_body.scss */
 .main .about-me .about-me-content p a:hover {
   text-decoration: underline;
 }
-/* line 140, ../scss/_body.scss */
+/* line 141, ../scss/_body.scss */
 .main .resume {
   margin: 50px 0px;
 }
-/* line 144, ../scss/_body.scss */
+/* line 145, ../scss/_body.scss */
 .main .separator hr {
   border: solid #1b1b1d;
   border-width: 1px 0 0;
@@ -9965,20 +9971,20 @@ th.hide-for-touch {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 152, ../scss/_body.scss */
+/* line 153, ../scss/_body.scss */
 .main .contact {
   margin: 50px 0;
 }
-/* line 155, ../scss/_body.scss */
+/* line 156, ../scss/_body.scss */
 .main .contact .contact-header {
   margin-bottom: 50px;
 }
-/* line 158, ../scss/_body.scss */
+/* line 159, ../scss/_body.scss */
 .main .contact .contact-header h1 {
   font-family: 'Source Sans Pro', sans-serif !important;
   text-align: center;
 }
-/* line 165, ../scss/_body.scss */
+/* line 166, ../scss/_body.scss */
 .main .contact .contact-content .submit {
   font-family: 'Source Sans Pro', sans-serif !important;
   font-size: 14px;
@@ -9988,7 +9994,7 @@ th.hide-for-touch {
   border: 1px solid #cccccc;
   border-radius: 20px;
 }
-/* line 174, ../scss/_body.scss */
+/* line 175, ../scss/_body.scss */
 .main .contact .contact-content .submit:hover {
   border-color: #999999;
 }

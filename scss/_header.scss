@@ -6,6 +6,9 @@
 		//padding-left: 10px;
 		//padding-right: 10px;
 	}
+	.title-area .name p {
+		padding-left: 10px;
+	}
 
 	z-index: 1;
 	//background-color: $black;
@@ -72,7 +75,9 @@
 	}
 
 	&.expanded {
-		margin-bottom: 80px;
+		//margin-bottom: 80px;
+		opacity: 1;
+		background: white;
 
 		.title-area {
 			background: white;

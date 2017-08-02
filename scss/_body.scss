@@ -17,7 +17,7 @@
 		background-image: url('../images/website/resume-banner.jpg');
 
 		h1 {
-			top: 150px !important;
+			top: 150px;
 			color: $black !important;
 			font-size: 75px !important;
 		}
@@ -43,6 +43,7 @@
 		height: 100vh;
 		@media #{$medium-only} {
 			height: 500px;
+			padding-left: 10px;
 		}
 		@media #{$small-only} {
 			height: 250px;
