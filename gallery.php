@@ -148,9 +148,10 @@ $json = json_decode(file_get_contents($url), true);
 $photos = $json['photoset']['photo'];
 
 //needed vars
-$leftCol = "<div class='large-4 medium-4 small-12 left columns'>";
-$midCol = "<div class='large-4 medium-4 small-12 center columns'>";
-$rightCol = "<div class='large-4 medium-4 small-12 right columns'>";
+$leftCol = "<div class='large-4 medium-4 small-12 left columns show-for-medium-up'>";
+$midCol = "<div class='large-4 medium-4 small-12 center columns show-for-medium-up'>";
+$rightCol = "<div class='large-4 medium-4 small-12 right columns show-for-medium-up'>";
+$disp_sm = "<div class='small-12 columns show-for-small-only'>";
 
 //heights
 $leftH = 0;
@@ -177,12 +178,15 @@ for ($i = 0; $i < count($photos); $i++) {
 		$rightCol .= $output[0];
 		$rightH += $output[1];
 	}	
+
+	//small size by date
+	$disp_sm .= $output[0];
 }
 
 echo $leftCol . "</div>";
 echo $midCol . "</div>";
 echo $rightCol . "</div>";
-
+echo $disp_sm . "</div>";
 
 /*
 $outputArray = array();

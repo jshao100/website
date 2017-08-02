@@ -1,4 +1,12 @@
 .top-bar {
+	@media #{$small-only} {
+		.title-area .name p {
+			padding-left: 10px;
+		}
+		//padding-left: 10px;
+		//padding-right: 10px;
+	}
+
 	z-index: 1;
 	//background-color: $black;
 	background-color: white;
@@ -45,7 +53,37 @@
 				left    : -8%;
 				height  : 1px;
 				width   : 116%;  /* or 100px */
-				border-bottom:2px solid rgba(10, 10, 10, 1.0);
+
+				@media #{$medium-up} {
+					border-bottom:2px solid rgba(10, 10, 10, 1.0);
+				}
+				
+			}
+		}
+	}
+
+	//mobile
+	.toggle-topbar.menu-icon {
+		top: 35%;
+
+		a span::after {
+			box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.7), 0 7px 0 1px rgba(10, 10, 10, 0.7), 0 14px 0 1px rgba(10, 10, 10, 0.7);
+		}
+	}
+
+	&.expanded {
+		margin-bottom: 80px;
+
+		.title-area {
+			background: white;
+		}
+
+		.top-bar-section ul li > a {
+			padding: 0px;
+			padding-left: 10px;
+
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}

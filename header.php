@@ -14,6 +14,7 @@ if (strpos($_SERVER['SCRIPT_NAME'], 'index.php') !== false) {
 		<li class="name">
 			<h1><p>James Shao</p></h1>
 		</li>
+		<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 	</ul>
 
 	<section class="top-bar-section">
@@ -43,6 +44,10 @@ if ($root) {
 			<li><a href="/#contact">CONTACT ME</a></li>';
 }
 ?>
+		</ul>
+
+		<!-- Left Nav Section -->
+		<ul class="left">
 		</ul>
 	</section>
 </nav>

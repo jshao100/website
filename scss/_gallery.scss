@@ -3,8 +3,21 @@
 	background-color: black;
 	height: 450px !important;
 	top: -80px;
+		
+	@media #{$medium-only} {
+		height: 450px !important;
+	}
+	@media #{$small-only} {
+		height: 250px !important;
+		//top: 0px !important;
+		margin-bottom: 25px;
+	}
 
 	.banner-link {
+		@media #{$small-only} {
+			margin-top: 10px;
+		}
+
 		a {
 			font-size: 30px;
 			color: $white;
