@@ -50,8 +50,7 @@ if ($handle) {
 ?>
 							</div>
 						</div>
-						<div class="large-1 large-only columns"></div>
-						<div class="large-7 medium-8 small-12 columns">
+						<div class="large-7 large-push-1 medium-8 small-12 columns">
 							<div class="about-me-text">
 								<p class="text-justify">
 									<?php include './text/about-me.txt'; ?>
