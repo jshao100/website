@@ -10185,3 +10185,7 @@ th.hide-for-touch {
   text-align: center;
   margin: 15px 0;
 }
+/* line 27, ../scss/_project.scss */
+.project-list .project a:hover {
+  background: black;
+}

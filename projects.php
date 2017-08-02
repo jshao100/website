@@ -6,6 +6,8 @@
 		<title>James Shao</title>
 		<link rel="stylesheet" href="/stylesheets/app.css" />
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
+		<link rel="shortcut icon" href="/images/website/favicon.ico" type="image/x-icon"/>
+		<link rel="icon" href="/images/website/favicon.ico" type="image/x-icon"/>
 		<script src="/bower_components/modernizr/modernizr.js"></script>
 	</head>
 	<body>

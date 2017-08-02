@@ -4,6 +4,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>James Shao</title>
+		<link rel="shortcut icon" href="/images/website/favicon.ico" type="image/x-icon"/>
+		<link rel="icon" href="/images/website/favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" href="/stylesheets/app.css" />
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
 		<script src="/bower_components/modernizr/modernizr.js"></script>
