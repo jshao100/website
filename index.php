@@ -71,7 +71,7 @@ if ($handle) {
 			</div>
 			<div class="resume">
 				<div class="row">
-					<div class="large-10 medium-10 small-12 large-push-1 medium-push 1 columns">
+					<div class="large-10 medium-10 small-12 large-push-1 medium-push-1 columns">
 						<img src="/images/website/resume-example.png" width=100% height=100%/>
 					</div>
 				</div>
@@ -92,23 +92,26 @@ if ($handle) {
 				</div>
 				<div class="row">
 					<div class="contact-content large-8 medium-10 small-12 large-push-2 medium-push-1">
-						<form class="contact-us-form">
+						<form class="contact-us-form" method="post" action="send_form_email.php">
 							<div class="row">
-								<div class="columns">
-									<input type="text" placeholder="full name">
+								<div class="large-6 columns medium-6 small-12 left">
+									<input type="text" placeholder="first name" name="first_name">
+								</div>
+								<div class="large-6 medium-6 small-12 columns right">
+									<input type="text" placeholder="last name" name="last_name">
 								</div>
 							</div>
 							<div class="row form-padding">
 								<div class="large-6 columns medium-6 small-12 left">
-									<input type="email" placeholder="email">
+									<input type="email" placeholder="email" name="email">
 								</div>
-								<div class="large-6 medium-5 small-12 columns right">
-									<input type="tel" placeholder="phone number">
+								<div class="large-6 medium-6 small-12 columns right">
+									<input type="tel" placeholder="phone number" name="phone">
 								</div>
 							</div>
 							<div class="row">
 								<div class="columns">
-									<input type="text" placeholder="subject">
+									<input type="text" placeholder="subject" name="subject">
 								</div>
 							</div>
 							<div class="row">
