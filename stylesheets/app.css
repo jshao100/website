@@ -10149,26 +10149,28 @@ th.hide-for-touch {
   width: auto;
   height: auto;
 }
-/* line 73, ../scss/_gallery.scss */
-.my-gallery img:hover {
-  box-shadow: 3px 4px 5px #888888;
-  transform: scale(1.03, 1.03);
+@media only screen and (min-width: 40.0625em) {
+  /* line 73, ../scss/_gallery.scss */
+  .my-gallery img:hover {
+    box-shadow: 3px 4px 5px #888888;
+    transform: scale(1.03, 1.03);
+  }
 }
-/* line 79, ../scss/_gallery.scss */
+/* line 81, ../scss/_gallery.scss */
 .my-gallery figure {
   display: block;
   margin: 0;
 }
-/* line 85, ../scss/_gallery.scss */
+/* line 87, ../scss/_gallery.scss */
 .my-gallery figure a {
   text-align: center;
   display: block;
 }
-/* line 91, ../scss/_gallery.scss */
+/* line 93, ../scss/_gallery.scss */
 .my-gallery figcaption {
   display: none;
 }
-/* line 95, ../scss/_gallery.scss */
+/* line 97, ../scss/_gallery.scss */
 .my-gallery .gallery-thumbnail {
   margin: 10px 0;
 }
