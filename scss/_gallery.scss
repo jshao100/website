@@ -37,6 +37,12 @@
 }
 
 .main-gallery {
+	.row {
+		@media #{$medium-only} {
+			max-width: 90rem !important;
+		}
+	}
+
 	margin: 0;
 	margin-bottom: 75px;
 }
