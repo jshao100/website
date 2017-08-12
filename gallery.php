@@ -150,15 +150,22 @@ $json = json_decode(file_get_contents($url), true);
 $photos = $json['photoset']['photo'];
 
 //needed vars
-$leftCol = "<div class='large-4 medium-4 small-12 left columns show-for-medium-up'>";
-$midCol = "<div class='large-4 medium-4 small-12 center columns show-for-medium-up'>";
-$rightCol = "<div class='large-4 medium-4 small-12 right columns show-for-medium-up'>";
+$leftCol = "<div class='large-4 left columns show-for-large-only'>";
+$midCol = "<div class='large-4 center columns show-for-large-only'>";
+$rightCol = "<div class='large-4 right columns show-for-large-only'>";
+
+$left_md = "<div class='medium-6 left columns show-for-medium-only'>";
+$right_md = "<div class='medium-6 right columns show-for-medium-only'>";
+
 $disp_sm = "<div class='small-12 columns show-for-small-only'>";
 
 //heights
 $leftH = 0;
 $midH = 0;
 $rightH = 0;
+
+$leftH_md = 0;
+$rightH_md = 0;
 
 for ($i = 0; $i < count($photos); $i++) {
 	$photo_id =	$photos[$i]["id"];
@@ -167,7 +174,8 @@ for ($i = 0; $i < count($photos); $i++) {
 	//get specific information
 	$desc = getDescription($title);
 	$output = createOutput($photo_id, $desc[0], $desc[1], $desc[2]);
-	
+
+	//large size	
 	if ($leftH <= $midH && $leftH <= $rightH) { //if left col is the least tall
 		$leftCol .= $output[0];	
 		$leftH += $output[1];
@@ -181,6 +189,16 @@ for ($i = 0; $i < count($photos); $i++) {
 		$rightH += $output[1];
 	}	
 
+	//medium size
+	if ($leftH_md <= $rightH_md) {
+		$left_md .= $output[0];
+		$leftH_md += $output[1];
+	}
+	else {
+		$right_md .= $output[0];
+		$rightH_md += $output[1];
+	}
+
 	//small size by date
 	$disp_sm .= $output[0];
 }
@@ -188,6 +206,10 @@ for ($i = 0; $i < count($photos); $i++) {
 echo $leftCol . "</div>";
 echo $midCol . "</div>";
 echo $rightCol . "</div>";
+
+echo $left_md . "</div>";
+echo $right_md . "</div>";
+
 echo $disp_sm . "</div>";
 
 /*
