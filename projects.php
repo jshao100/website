@@ -24,13 +24,13 @@
 				<!--LEFT COLUMN-->
 				<div class="large-6 medium-6 small-12 columns">
 					<div class="row">
-						<div class="project large-9">
+						<div class="project large-10">
 							<a href="#">Project 1</a>
 						</div>
-						<div class="project large-9">
+						<div class="project large-10">
 							<a href="#">Project 1</a>
 						</div>
-						<div class="project large-9">
+						<div class="project large-10">
 							<a href="#">Project 1</a>
 						</div>
 					</div>
@@ -39,17 +39,47 @@
 				<!--RIGHT COLUMN-->
 				<div class="large-6 medium-6 small-12 columns">
 					<div class="row">
-						<div class="project large-9">
+						<div class="project large-10">
 							<a href="#">Project 1</a>
 						</div>
-						<div class="project large-9">
+						<div class="project large-10">
 							<a href="#">Project 1</a>
 						</div>
-						<div class="project large-9">
+						<div class="project large-10">
 							<a href="#">Project 1</a>
 						</div>
 					</div>
 
+				</div>
+			</div>
+
+			<hr></hr>
+
+			<div class="row projects">
+				<div class="project-card large-8 medium-8 small-12 large-push-2 medium-push-2">
+					<div class="project-brief row">
+						<div class="project-left large-8 medium-7 small-6 columns left">
+							<div class="project-name">
+								<h4>Project Name</h4>
+							</div>
+							<div class="project-date">
+								<p>XX/XX - XX/XX</p>
+							</div>
+						</div>
+						<div class="project-right large-4 medium-5 small-6 columns right">
+							<div class="project-lang">
+								<p>C, Java, Python, C++, HTML, SASS</p>
+							</div>
+						</div>
+					</div>
+					<div class="project-content">
+						<p class="project-text">
+							Lots of text will go here.
+						</p>
+					</div>
+					<div class="project-more">
+
+					</div>
 				</div>
 			</div>
 		</section>

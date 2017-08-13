@@ -10177,25 +10177,27 @@ th.hide-for-touch {
 
 /* line 1, ../scss/_project.scss */
 .project-banner {
-  height: 250px !important;
+  height: 300px !important;
   background-color: #100f0f;
-  margin-bottom: 50px;
+  top: -80px;
 }
 /* line 6, ../scss/_project.scss */
 .project-banner .banner-text h1 {
   font-size: 50px !important;
-  top: 80px !important;
+  top: 125px !important;
 }
 
 /* line 12, ../scss/_project.scss */
 .project-list {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  position: relative;
+  top: -30px;
 }
-/* line 15, ../scss/_project.scss */
+/* line 17, ../scss/_project.scss */
 .project-list .project {
   margin: 0 auto;
 }
-/* line 18, ../scss/_project.scss */
+/* line 20, ../scss/_project.scss */
 .project-list .project a {
   display: block;
   background: #2c2b2b;
@@ -10205,7 +10207,7 @@ th.hide-for-touch {
   text-align: center;
   margin: 15px 0;
 }
-/* line 27, ../scss/_project.scss */
+/* line 29, ../scss/_project.scss */
 .project-list .project a:hover {
   background: black;
 }
