@@ -109,6 +109,8 @@ function createOutput($photo_id, $location, $desc, $date) {
 }
 
 function getDescription($title) {
+	$title = str_replace(".jpg", "", $title);
+
 	//get image information
 	$location;
 	$date;
