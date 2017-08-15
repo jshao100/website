@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>James Shao</title>
+		<link rel="shortcut icon" href="/images/website/favicon.ico" type="image/x-icon"/>
+		<link rel="icon" href="/images/website/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="/stylesheets/app.css" />
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
+		<script src="/bower_components/modernizr/modernizr.js"></script>
+	</head>
+	<body>
+
+		<div class="experiment">
+			<div class="circle large red pos_me">
+				<h2 class="top">James</h2>
+				<h2>Shao</h2>
+			</div>
+
+			<div class="circle large blue pos_gallery">
+				<h2 class="middle">Gallery</h2>
+			</div>
+			<div class="circle medium yellow pos_projects">
+				<h2 class="middle">Projects</h2>
+			</div>
+			
+			<div class="circle medium green pos_exp">
+				<h2 class="middle">Experience</h2>
+			</div>
+			
+			<div class="circle medium blue pos_resume">
+				<h2 class="middle">Resume</h2>
+			</div>
+		</div>
+	</body>
+</html>

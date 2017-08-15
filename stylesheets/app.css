@@ -10211,3 +10211,140 @@ th.hide-for-touch {
 .project-list .project a:hover {
   background: black;
 }
+
+/* line 1, ../scss/_experiment.scss */
+.experiment {
+  display: block;
+  height: 100%;
+  width: 100%;
+  /*
+  	@media only screen and (min-width:64.0625em) and (max-width:90em) {
+  		zoom: 1;
+  	}
+  	@media only screen and (min-width:40.0625em) and (max-width:64em) {
+  		zoom: 1.1;
+  	}
+  	@media only screen and (max-width: 40em) {
+  		zoom: 1.3;
+  	}
+  */
+}
+@media only screen and (min-width: 64.0625em) and (max-width: 90em) {
+  /* line 1, ../scss/_experiment.scss */
+  .experiment {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  /* line 1, ../scss/_experiment.scss */
+  .experiment {
+    font-size: 13px;
+    margin-top: 80px;
+  }
+}
+@media only screen and (max-width: 40em) {
+  /* line 1, ../scss/_experiment.scss */
+  .experiment {
+    display: none;
+  }
+}
+/* line 18, ../scss/_experiment.scss */
+.experiment .red {
+  background-color: red;
+}
+/* line 22, ../scss/_experiment.scss */
+.experiment .blue {
+  background-color: blue;
+}
+/* line 26, ../scss/_experiment.scss */
+.experiment .yellow {
+  background-color: yellow;
+}
+/* line 30, ../scss/_experiment.scss */
+.experiment .green {
+  background-color: green;
+}
+/* line 34, ../scss/_experiment.scss */
+.experiment .circle {
+  display: inline-block;
+  position: relative;
+}
+/* line 38, ../scss/_experiment.scss */
+.experiment .circle h2 {
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
+/* line 55, ../scss/_experiment.scss */
+.experiment .large {
+  height: 20vw;
+  width: 20vw;
+  margin-left: -10vw;
+  margin-top: -10vw;
+  border-radius: 10vw;
+}
+/* line 62, ../scss/_experiment.scss */
+.experiment .large h2 {
+  font-size: 2em;
+  line-height: 1em;
+}
+/* line 63, ../scss/_experiment.scss */
+.experiment .large h2.top {
+  margin-top: -1em;
+}
+/* line 67, ../scss/_experiment.scss */
+.experiment .large h2.middle {
+  margin-top: -0.5em;
+}
+/* line 76, ../scss/_experiment.scss */
+.experiment .medium {
+  height: 16vw;
+  width: 16vw;
+  margin-left: 8vw;
+  margin-top: 8vw;
+  border-radius: 8vw;
+}
+/* line 83, ../scss/_experiment.scss */
+.experiment .medium h2 {
+  font-size: 1.6em;
+  line-height: 0.8em;
+}
+/* line 84, ../scss/_experiment.scss */
+.experiment .medium h2.middle {
+  margin-top: -0.4em;
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 93, ../scss/_experiment.scss */
+  .experiment .pos_me {
+    left: 50vw;
+    top: 14vw;
+  }
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 100, ../scss/_experiment.scss */
+  .experiment .pos_gallery {
+    left: 28vw;
+    top: -6vw;
+  }
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 107, ../scss/_experiment.scss */
+  .experiment .pos_projects {
+    left: -3vw;
+    top: 25vw;
+  }
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 114, ../scss/_experiment.scss */
+  .experiment .pos_exp {
+    left: 6vw;
+    top: 3vw;
+  }
+}
+@media only screen and (min-width: 40.0625em) {
+  /* line 121, ../scss/_experiment.scss */
+  .experiment .pos_resume {
+    left: -20vw;
+    top: 26vw;
+  }
+}
