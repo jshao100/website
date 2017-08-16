@@ -7,10 +7,11 @@
 		<link rel="shortcut icon" href="/images/website/favicon.ico" type="image/x-icon"/>
 		<link rel="icon" href="/images/website/favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" href="/stylesheets/app.css" />
+		<link rel="stylesheet" href="/stylesheets/animate.css">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
 		<script src="/bower_components/modernizr/modernizr.js"></script>
 	</head>
-	<body>
+	<body class="lock">
 
 		<div class="experiment">
 			<div class="circle large red pos_me reset">
@@ -127,9 +128,9 @@ for ($i = 1; $i <= $numProj; $i++) {
 	 */
 
 error_reporting(E_ERROR | E_PARSE);
-$numProj = 4;
+$numExp = 3;
 
-for ($i = 1; $i <= $numProj; $i++) {
+for ($i = 1; $i <= $numExp; $i++) {
 	$handle = fopen("./text/experience/exp".$i.".txt", "r");
 	if ($handle) {
 		$title;
@@ -162,13 +163,52 @@ for ($i = 1; $i <= $numProj; $i++) {
 		echo '<div class="circle x-small green pos_exp'.$i.'_2"><p>'.$s2.'</p></div>';
 		echo '<div class="circle x-small red pos_exp'.$i.'_3"><p>'.$s3.'</p></div>';
 		echo '</div>';
-
 	}
-
 }
-		?>
-			</div>
+?>
+				</div>
 
+				<div class="me_content">
+					<div class="me">
+
+<?php
+error_reporting(E_ERROR | E_PARSE);
+
+$colors = array("yellow", "red", "green", "blue", "orange");
+$sizes = array("small", "small", "small", "x-small", "x-small", "x-small", "small", "x-small", "small", "x-small");
+$handle = fopen("./text/about/list.txt", "r");
+if ($handle) {
+	$count = 1;
+	while (($line = fgets($handle)) !== false) {
+		echo '<div class="circle '.$sizes[$count-1].' '.$colors[($count-1)%5].' pos_me_'.$count.'"><p>'.$line.'</p></div>';
+		$count++;
+	}
+}
+?>
+					</div>
+				</div>
+
+				<!-- MISC Spheres -->
+				<div class="filler">
+					<div class="animate">
+						<div class="circle xx-small red animated pulse p1 pos_animate_1"></div>
+						<div class="circle xx-small green animated pulse p1 pos_animate_2"></div>
+						<div class="circle xx-small blue animated pulse p2 pos_animate_3"></div>
+						<div class="circle xx-small orange animated pulse p3 pos_animate_4"></div>
+						<div class="circle xx-small yellow animated pulse p1 pos_animate_5"></div>
+
+						<div class="circle x-small red animated pulse p2 pos_animate_6"></div>
+						<div class="circle x-small green animated pulse p1 pos_animate_7"></div>
+						<div class="circle x-small blue animated pulse p3 pos_animate_8"></div>
+						
+						<div class="circle xx-small green animated pulse p2 pos_animate_9"></div>
+						<div class="circle xx-small green animated pulse p1 pos_animate_10"></div>
+						<div class="circle xx-small blue animated pulse p3 pos_animate_11"></div>
+						<div class="circle xx-small orange animated pulse p3 pos_animate_12"></div>
+					</div>
+				</div>
+
+			</div>
 		</div>
 		<script src="/bower_components/foundation/js/vendor/jquery.js"></script>
 		<script src="/bower_components/foundation/js/vendor/fastclick.js"></script>

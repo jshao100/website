@@ -26,6 +26,10 @@ $( document ).ready(function() {
 		} else if ($(this).parent().hasClass("pos_about")) {
 			$(".experiment").css("transform-origin","90vw 51vw");
 			$(".experiment").addClass("zoom_about");
+			
+			//add class show to all children
+			$(".me_content").children().children(".small").children("p").addClass("show");
+			$(".me_content").children().children(".x-small").children("p").addClass("show");
 		}
 	});
 

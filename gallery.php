@@ -14,26 +14,8 @@
 	</head>
 	<body>
 
-<?php include 'header.php'; ?>
-
 
 <section class="main">
-
-	<!-- MAIN BANNER -->
-	<div class="banner gallery-banner">
-		<div class="row banner-text">
-			<h1>PORTFOLIO
-			<div class="banner-link" class="row">
-				<a target="_blank" href="https://flic.kr/s/aHsm58jQ5H">Download</a>
-			</div>
-			</h1>
-		</div>
-		<!--
-		<div class="banner-icon-main row banner-down">
-			<i class="banner-icon fa fa-angle-down" aria-hidden="true"></i>
-			</div>
-			-->
-	</div>
 
 	<!-- MAIN GALLERY -->
 	<div class="main-gallery">
@@ -375,8 +357,6 @@ echo $rightCol . "</div>";
 				</div>
 				-->
 </section>
-
-<?php include 'footer.php'; ?>
 
 <script src="/bower_components/foundation/js/vendor/jquery.js"></script>
 <script src="/bower_components/foundation/js/vendor/fastclick.js"></script>
