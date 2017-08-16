@@ -68,7 +68,7 @@ $( document ).ready(function() {
 					$(".experiment").css("transform-origin","60vw 0vw");
 					$(".exp1").find(".x-small").children().addClass("showX");
 				} else if ($(this).parent().parent().hasClass("exp2")) {
-					$(".experiment").css("transform-origin","87vw 0vw");
+					$(".experiment").css("transform-origin","84vw 0vw");
 					$(".exp2").find(".x-small").children().addClass("showX");
 				} else if ($(this).parent().parent().hasClass("exp3")) {
 					$(".experiment").css("transform-origin","87vw 15vw");
