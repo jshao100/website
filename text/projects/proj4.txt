@@ -1,0 +1,6 @@
+MazeDB
+April 2016
+JQuery, PHP, CSS, HTML
+A maze-creating webapp with user accounts and a maze rating system
+Mazes are verified using a DFS algorithm before being saved
+https://github.com/jshao100/Maze-DB

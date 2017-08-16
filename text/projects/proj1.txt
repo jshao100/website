@@ -1,0 +1,6 @@
+Qiosk
+July 2017
+JQuery, SASS, Foundation
+Top 3 at Qualcomm's 16 hr intern hackathon
+Aims to assist the homeless with jobs and resources
+https://github.com/tkakusa/Qiosk

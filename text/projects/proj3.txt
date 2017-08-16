@@ -1,0 +1,6 @@
+Intelligent Search
+Sept - Dec 2016
+Java, JQuery, Bash, SQL, Visual Basic
+Led a team of students and created a lexical search for meals and bus routes
+Wrote the backend RESTful API and scripts
+https://github.com/IntelligentSearch/Search

@@ -1,0 +1,5 @@
+Qualcomm
+Summer 2017
+Picked up the EGL/GLES graphics framework in order to create tests that ensured vital functions ran properly.
+Helped port 3 major test packages to use an updated framework that allowed for more advanced testing.
+Another sentence goes here

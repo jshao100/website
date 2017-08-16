@@ -1,0 +1,5 @@
+Boeing
+Summer 2016
+Built an essential plugin that calculates bundle widths; crucial data that is required by engineers
+Built a plugin that generates a report on a design or project to get important information at a glance without wasting time
+Created the program that will format and fix data from the old database before translation occurs

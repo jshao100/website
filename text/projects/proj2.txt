@@ -1,0 +1,5 @@
+$(this)
+August 2017
+JQuery, PHP, SASS, HTML
+Personal website and image gallery
+https://github.com/jshao100/website

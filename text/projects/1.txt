@@ -1,5 +1,0 @@
-Sample Project
-XX/XX - XX/XX
-C++, Java, HTML, CSS, SASS
-http://www.github.com/jshao100/website/
-This is the about me section where I write lots of shit and it gets put on the website

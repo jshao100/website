@@ -1,0 +1,5 @@
+Church Pension Group
+Summer 2015
+Creted new front-end styling using SASS and JavaScript for their multi-billion dollar main page and publishing site.
+Worked closely with the development team to integrate the new styling into an existing ColdFusion and CMS codebase
+Worked alongside the Development team on a tight schedule. Had daily standup meetings with Jira Agile
