@@ -207,7 +207,6 @@ if ($handle) {
 						<div class="circle xx-small orange animated pulse p3 pos_animate_12"></div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 		<script src="/bower_components/foundation/js/vendor/jquery.js"></script>
