@@ -10521,14 +10521,14 @@ body.lock {
 .experiment .me .small p {
   height: 7vw;
   width: 6.5vw;
-  font-size: 0.5em;
+  font-size: 0.6em;
   padding-top: 0;
 }
 /* line 318, ../scss/_experiment.scss */
 .experiment .me .x-small p {
   height: 5vw;
   width: 4.5vw;
-  font-size: 0.4em;
+  font-size: 0.5em;
 }
 /* line 326, ../scss/_experiment.scss */
 .experiment .me .small p,
