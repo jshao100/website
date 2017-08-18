@@ -10235,7 +10235,7 @@ body.lock {
   height: 100%;
   width: 100%;
 }
-@media only screen and (min-width: 64.0625em) and (max-width: 90em) {
+@media only screen and (min-width: 64.0625em) {
   /* line 18, ../scss/_experiment.scss */
   .experiment.zoom {
     transform: scale(2);
@@ -10255,7 +10255,7 @@ body.lock {
     -o-transform: scale(2.5);
   }
 }
-@media only screen and (min-width: 64.0625em) and (max-width: 90em) {
+@media only screen and (min-width: 64.0625em) {
   /* line 36, ../scss/_experiment.scss */
   .experiment.zoom2 {
     transform: scale(4);
@@ -10280,7 +10280,7 @@ body.lock {
   font-family: experiment;
   color: #261A07;
 }
-@media only screen and (min-width: 64.0625em) and (max-width: 90em) {
+@media only screen and (min-width: 64.0625em) {
   /* line 14, ../scss/_experiment.scss */
   .experiment {
     font-size: 16px;
