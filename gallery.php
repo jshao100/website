@@ -134,9 +134,9 @@ $json = json_decode(file_get_contents($url), true);
 $photos = $json['photoset']['photo'];
 
 //needed vars
-$leftCol = "<div class='large-4 left columns show-for-large-only'>";
-$midCol = "<div class='large-4 center columns show-for-large-only'>";
-$rightCol = "<div class='large-4 right columns show-for-large-only'>";
+$leftCol = "<div class='large-4 left columns show-for-large-up'>";
+$midCol = "<div class='large-4 center columns show-for-large-up'>";
+$rightCol = "<div class='large-4 right columns show-for-large-up'>";
 
 $left_md = "<div class='medium-6 left columns show-for-medium-only'>";
 $right_md = "<div class='medium-6 right columns show-for-medium-only'>";
@@ -346,7 +346,7 @@ echo $rightCol . "</div>";
 						<div class="large-5 medium-6 small-12 columns gear-image">
 
 						</div>
-						<div class="large-1 large-only columns"></div>
+						<div class="large-1 large-up columns"></div>
 							<div class="large-6 medium-6 small-12 columns gear-text">
 								<p>
 
