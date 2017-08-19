@@ -18,7 +18,7 @@
 				<a class="top">James</br>Shao</a>
 			</div>
 			<div class="circle large blue pos_gallery">
-				<a class="middle">Gallery</a>
+				<a class="middle" href="./gallery/">Gallery</a>
 			</div>
 			<div class="circle medium yellow pos_projects">
 				<a class="middle click_to_zoom">Projects</a>
@@ -33,16 +33,16 @@
 				<a class="fa fa-file-text-o resume" aria-hidden="true"></a>
 			</div>
 			<div class="circle small orange pos_mailto">
-				<a class="fa fa-envelope-o mailto" aria-hidden="true"></a>
+				<a class="fa fa-envelope-o mailto" aria-hidden="true" href="mailto:jshao100+website@gmail.com" title="Contact Me!" target="_blank"></a>
 			</div>
 			<div class="circle small orange pos_github">
-				<a class="fa fa-github github" aria-hidden="true"></a>
+				<a class="fa fa-github github" aria-hidden="true" href="https://github.com/jshao100" target="_blank" ></a>
 			</div>
 			<div class="circle small orange pos_instagram">
-				<a class="fa fa-instagram instagram" aria-hidden="true"></a>
+				<a class="fa fa-instagram instagram" aria-hidden="true" href="https://www.instagram.com/jshao_/" target="_blank"></a>
 			</div>
 			<div class="circle small orange pos_linkedin">
-				<a class="fa fa-linkedin linkedin" aria-hidden="true"></a>
+				<a class="fa fa-linkedin linkedin" aria-hidden="true" href="https://www.linkedin.com/in/jamesshao/" target="_blank"></a>
 			</div>
 
 			<!-- PROJECTS -->
