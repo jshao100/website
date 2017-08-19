@@ -18,7 +18,7 @@
 				<a class="top">James</br>Shao</a>
 			</div>
 			<div class="circle large blue pos_gallery">
-				<a class="middle" href="./gallery/">Gallery</a>
+				<a class="middle" href="../gallery/">Gallery</a>
 			</div>
 			<div class="circle medium yellow pos_projects">
 				<a class="middle click_to_zoom">Projects</a>
