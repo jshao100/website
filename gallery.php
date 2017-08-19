@@ -13,7 +13,7 @@
 		<script src="/bower_components/modernizr/modernizr.js"></script>
 	</head>
 	<body>
-		<div class="home"><a><span class="fa fa-arrow-left" aria-hidden="true"></span>home</a></div>
+		<div class="home"><a href="../"><span class="fa fa-arrow-left" aria-hidden="true"></span>home</a></div>
 
 <section class="main">
 
