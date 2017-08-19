@@ -10111,31 +10111,56 @@ th.hide-for-touch {
   border: 3px solid #c8c8c8;
 }
 
-/* line 39, ../scss/_gallery.scss */
+@font-face {
+  font-family: experiment;
+  src: url(../font/ElenarLove-Regular.woff);
+}
+/* line 44, ../scss/_gallery.scss */
+.home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-family: experiment;
+  opacity: .7;
+}
+/* line 51, ../scss/_gallery.scss */
+.home span {
+  padding-right: 5px;
+}
+/* line 55, ../scss/_gallery.scss */
+.home a {
+  color: #261A07;
+}
+/* line 59, ../scss/_gallery.scss */
+.home:hover {
+  opacity: .9;
+}
+
+/* line 64, ../scss/_gallery.scss */
 .main-gallery {
   margin: 0;
   margin-bottom: 50px;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-  /* line 40, ../scss/_gallery.scss */
+  /* line 65, ../scss/_gallery.scss */
   .main-gallery .row {
     max-width: 90rem !important;
   }
 }
 
-/* line 51, ../scss/_gallery.scss */
+/* line 76, ../scss/_gallery.scss */
 .pswp__caption__center {
   font-size: 16px !important;
   text-align: center !important;
 }
 
-/* line 56, ../scss/_gallery.scss */
+/* line 81, ../scss/_gallery.scss */
 .my-gallery {
   width: 100%;
   float: left;
 }
-/* line 60, ../scss/_gallery.scss */
+/* line 85, ../scss/_gallery.scss */
 .my-gallery p {
   display: inline-block;
   margin: 0;
@@ -10145,33 +10170,33 @@ th.hide-for-touch {
   color: #1b1b1d;
   line-height: 35px;
 }
-/* line 70, ../scss/_gallery.scss */
+/* line 95, ../scss/_gallery.scss */
 .my-gallery img {
   width: auto;
   height: auto;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 74, ../scss/_gallery.scss */
+  /* line 99, ../scss/_gallery.scss */
   .my-gallery img:hover {
     box-shadow: 3px 4px 5px #888888;
     transform: scale(1.03, 1.03);
   }
 }
-/* line 82, ../scss/_gallery.scss */
+/* line 107, ../scss/_gallery.scss */
 .my-gallery figure {
   display: block;
   margin: 0;
 }
-/* line 88, ../scss/_gallery.scss */
+/* line 113, ../scss/_gallery.scss */
 .my-gallery figure a {
   text-align: center;
   display: block;
 }
-/* line 94, ../scss/_gallery.scss */
+/* line 119, ../scss/_gallery.scss */
 .my-gallery figcaption {
   display: none;
 }
-/* line 98, ../scss/_gallery.scss */
+/* line 123, ../scss/_gallery.scss */
 .my-gallery .gallery-thumbnail {
   margin: 10px 0;
 }

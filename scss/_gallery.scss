@@ -3,7 +3,7 @@
 	background-color: black;
 	height: 450px !important;
 	top: -80px;
-		
+
 	@media #{$medium-only} {
 		height: 450px !important;
 	}
@@ -36,6 +36,31 @@
 	}
 }
 
+@font-face {
+	font-family: experiment;
+	src: url(../font/ElenarLove-Regular.woff);
+}
+
+.home {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	font-family: experiment;
+	opacity: .7;
+
+	span {
+		padding-right: 5px;
+	}
+
+	a {
+		color: #261A07;
+	}
+
+	&:hover {
+		opacity: .9;
+	}
+}
+
 .main-gallery {
 	.row {
 		@media #{$medium-only} {
@@ -45,7 +70,7 @@
 
 	margin: 0;
 	margin-bottom: 50px;
-	margin-top: 50px;
+	padding-top: 50px;
 }
 
 .pswp__caption__center {
@@ -70,7 +95,7 @@
 	img {
 		width: auto;
 		height: auto;
-		
+
 		&:hover {
 			@media #{$medium-up} {
 				box-shadow: 3px 4px 5px #888888;
