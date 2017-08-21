@@ -213,7 +213,7 @@ if ($handle) {
 						<p>as of now, the website is not optimized for mobile experience. desktop viewing is advised. thanks.</p>
 					</div>
 					<div class="text">
-						<p>click on child circle to expand. click on parent circle to go back</p>
+						<p>click on <span class="blue">child</span> circle to expand. click on <span class="red">parent</span> circle to go back</p>
 					</div>
 				</div>
 			</div>
