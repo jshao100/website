@@ -10264,8 +10264,8 @@ body.lock {
 .experiment .mobile {
   position: fixed;
   bottom: 100px;
-  width: 80%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   font-family: experiment;
   color: #261A07;
   text-align: center;
@@ -10275,8 +10275,8 @@ body.lock {
   .experiment .text {
     position: fixed;
     bottom: 25px;
-    width: 80%;
-    margin-left: 10%;
+    width: 90%;
+    margin-left: 5%;
     font-family: experiment;
     color: #261A07;
     text-align: center;
@@ -10363,7 +10363,7 @@ body.lock {
 @media only screen and (max-width: 40em) {
   /* line 14, ../scss/_experiment.scss */
   .experiment {
-    margin-top: 200px;
+    margin-top: 175px;
     font-size: 8px;
   }
 }
