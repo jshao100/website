@@ -207,6 +207,12 @@ if ($handle) {
 						<div class="circle xx-small orange animated pulse p3 pos_animate_12"></div>
 					</div>
 				</div>
+				
+				<div class="notice">
+					<div class="show-for-small-only mobile">
+						<p>as of now, the website is not optimized for mobile experience. desktop viewing is advised. thanks.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src="/bower_components/foundation/js/vendor/jquery.js"></script>
