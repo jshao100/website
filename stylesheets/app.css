@@ -10260,8 +10260,12 @@ body.lock {
   height: 100%;
   width: 100%;
 }
-/* line 15, ../scss/_experiment.scss */
-.experiment .mobile {
+/* line 16, ../scss/_experiment.scss */
+.experiment .notice p {
+  font-size: 14px;
+}
+/* line 19, ../scss/_experiment.scss */
+.experiment .notice .mobile {
   position: fixed;
   bottom: 100px;
   width: 90%;
@@ -10271,8 +10275,8 @@ body.lock {
   text-align: center;
 }
 @media only screen and (max-width: 40em) {
-  /* line 25, ../scss/_experiment.scss */
-  .experiment .text {
+  /* line 29, ../scss/_experiment.scss */
+  .experiment .notice .text {
     position: fixed;
     bottom: 25px;
     width: 90%;
@@ -10281,31 +10285,31 @@ body.lock {
     color: #261A07;
     text-align: center;
   }
-  /* line 35, ../scss/_experiment.scss */
-  .experiment .text p span {
+  /* line 39, ../scss/_experiment.scss */
+  .experiment .notice .text p span {
     background-color: transparent;
   }
-  /* line 38, ../scss/_experiment.scss */
-  .experiment .text p span.red {
+  /* line 42, ../scss/_experiment.scss */
+  .experiment .notice .text p span.red {
     color: red;
   }
-  /* line 42, ../scss/_experiment.scss */
-  .experiment .text p span.blue {
+  /* line 46, ../scss/_experiment.scss */
+  .experiment .notice .text p span.blue {
     color: blue;
   }
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 25, ../scss/_experiment.scss */
-  .experiment .text {
+  /* line 15, ../scss/_experiment.scss */
+  .experiment .notice {
     display: none;
   }
 }
-/* line 58, ../scss/_experiment.scss */
+/* line 63, ../scss/_experiment.scss */
 .experiment.zoom .mobile {
   display: none;
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 56, ../scss/_experiment.scss */
+  /* line 61, ../scss/_experiment.scss */
   .experiment.zoom {
     transform: scale(2);
     -webkit-transform: scale(2);
@@ -10315,7 +10319,7 @@ body.lock {
   }
 }
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-  /* line 56, ../scss/_experiment.scss */
+  /* line 61, ../scss/_experiment.scss */
   .experiment.zoom {
     transform: scale(2.5);
     -webkit-transform: scale(2.5);
@@ -10325,17 +10329,17 @@ body.lock {
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 56, ../scss/_experiment.scss */
+  /* line 61, ../scss/_experiment.scss */
   .experiment.zoom {
     transform: scale(2.5);
   }
 }
-/* line 84, ../scss/_experiment.scss */
+/* line 89, ../scss/_experiment.scss */
 .experiment.zoom2 .mobile {
   display: none;
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 83, ../scss/_experiment.scss */
+  /* line 88, ../scss/_experiment.scss */
   .experiment.zoom2 {
     transform: scale(4);
     -webkit-transform: scale(4);
@@ -10345,7 +10349,7 @@ body.lock {
   }
 }
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-  /* line 83, ../scss/_experiment.scss */
+  /* line 88, ../scss/_experiment.scss */
   .experiment.zoom2 {
     transform: scale(5);
     -webkit-transform: scale(5);
@@ -10355,12 +10359,12 @@ body.lock {
   }
 }
 @media only screen and (max-width: 40em) {
-  /* line 83, ../scss/_experiment.scss */
+  /* line 88, ../scss/_experiment.scss */
   .experiment.zoom2 {
     transform: scale(5);
   }
 }
-/* line 109, ../scss/_experiment.scss */
+/* line 114, ../scss/_experiment.scss */
 .experiment h2 {
   font-family: experiment;
   color: #261A07;
@@ -10385,38 +10389,38 @@ body.lock {
     font-size: 8px;
   }
 }
-/* line 133, ../scss/_experiment.scss */
+/* line 138, ../scss/_experiment.scss */
 .experiment .red {
   background-color: #E55934;
 }
-/* line 137, ../scss/_experiment.scss */
+/* line 142, ../scss/_experiment.scss */
 .experiment .blue {
   background-color: #5BC0EB;
 }
-/* line 141, ../scss/_experiment.scss */
+/* line 146, ../scss/_experiment.scss */
 .experiment .yellow {
   background-color: #FDE74C;
 }
-/* line 145, ../scss/_experiment.scss */
+/* line 150, ../scss/_experiment.scss */
 .experiment .green {
   background-color: #9BC53D;
 }
-/* line 149, ../scss/_experiment.scss */
+/* line 154, ../scss/_experiment.scss */
 .experiment .orange {
   background-color: #FA7921;
 }
-/* line 152, ../scss/_experiment.scss */
+/* line 157, ../scss/_experiment.scss */
 .experiment .circle {
   backface-visibility: hidden;
   display: inline-block;
   position: absolute;
 }
-/* line 157, ../scss/_experiment.scss */
+/* line 162, ../scss/_experiment.scss */
 .experiment .circle h2 {
   text-align: center;
   position: relative;
 }
-/* line 163, ../scss/_experiment.scss */
+/* line 168, ../scss/_experiment.scss */
 .experiment .circle a {
   text-align: center;
   display: block;
@@ -10424,7 +10428,7 @@ body.lock {
   color: #261A07;
   border-radius: 30vw;
 }
-/* line 172, ../scss/_experiment.scss */
+/* line 177, ../scss/_experiment.scss */
 .experiment .circle:hover {
   transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -10432,7 +10436,7 @@ body.lock {
   -o-transform: scale(1.05);
   transition: 0.5s all ease;
 }
-/* line 184, ../scss/_experiment.scss */
+/* line 189, ../scss/_experiment.scss */
 .experiment .large {
   height: 20vw;
   width: 20vw;
@@ -10440,7 +10444,7 @@ body.lock {
   margin-top: -10vw;
   border-radius: 10vw;
 }
-/* line 191, ../scss/_experiment.scss */
+/* line 196, ../scss/_experiment.scss */
 .experiment .large a {
   display: table-cell;
   height: 20vw;
@@ -10452,7 +10456,7 @@ body.lock {
   text-align: center;
   line-height: 1em;
 }
-/* line 211, ../scss/_experiment.scss */
+/* line 216, ../scss/_experiment.scss */
 .experiment .large:hover {
   transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -10460,13 +10464,13 @@ body.lock {
   -o-transform: scale(1.05);
   transition: 0.5s all ease;
 }
-/* line 221, ../scss/_experiment.scss */
+/* line 226, ../scss/_experiment.scss */
 .experiment .medium {
   height: 16vw;
   width: 16vw;
   border-radius: 8vw;
 }
-/* line 226, ../scss/_experiment.scss */
+/* line 231, ../scss/_experiment.scss */
 .experiment .medium a {
   display: table-cell;
   height: 16vw;
@@ -10477,7 +10481,7 @@ body.lock {
   vertical-align: middle;
   text-align: center;
 }
-/* line 237, ../scss/_experiment.scss */
+/* line 242, ../scss/_experiment.scss */
 .experiment .medium:hover {
   transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -10485,13 +10489,13 @@ body.lock {
   -o-transform: scale(1.05);
   transition: 0.5s all ease;
 }
-/* line 247, ../scss/_experiment.scss */
+/* line 252, ../scss/_experiment.scss */
 .experiment .small {
   height: 7vw;
   width: 7vw;
   border-radius: 4vw;
 }
-/* line 252, ../scss/_experiment.scss */
+/* line 257, ../scss/_experiment.scss */
 .experiment .small a,
 .experiment .small p {
   display: table-cell;
@@ -10507,19 +10511,19 @@ body.lock {
   cursor: default;
   transition: 1s all ease;
 }
-/* line 268, ../scss/_experiment.scss */
+/* line 273, ../scss/_experiment.scss */
 .experiment .small a.show,
 .experiment .small p.show {
   opacity: 1;
 }
-/* line 272, ../scss/_experiment.scss */
+/* line 277, ../scss/_experiment.scss */
 .experiment .small a span,
 .experiment .small p span {
   display: block;
   opacity: 0.8;
   font-size: 0.75em;
 }
-/* line 278, ../scss/_experiment.scss */
+/* line 283, ../scss/_experiment.scss */
 .experiment .small a.resume, .experiment .small a.mailto, .experiment .small a.github, .experiment .small a.linkedin, .experiment .small a.instagram,
 .experiment .small p.resume,
 .experiment .small p.mailto,
@@ -10532,27 +10536,27 @@ body.lock {
   font-size: 2em;
 }
 @media only screen and (max-width: 40em) {
-  /* line 252, ../scss/_experiment.scss */
+  /* line 257, ../scss/_experiment.scss */
   .experiment .small a,
   .experiment .small p {
     white-space: normal;
   }
 }
-/* line 294, ../scss/_experiment.scss */
+/* line 299, ../scss/_experiment.scss */
 .experiment .small a.show {
   cursor: pointer;
 }
-/* line 298, ../scss/_experiment.scss */
+/* line 303, ../scss/_experiment.scss */
 .experiment .small p {
   text-align: center;
 }
-/* line 304, ../scss/_experiment.scss */
+/* line 309, ../scss/_experiment.scss */
 .experiment .x-small {
   height: 5vw;
   width: 5vw;
   border-radius: 4vw;
 }
-/* line 309, ../scss/_experiment.scss */
+/* line 314, ../scss/_experiment.scss */
 .experiment .x-small a {
   font-size: .6em;
   display: table-cell;
@@ -10562,7 +10566,7 @@ body.lock {
   text-align: center;
   vertical-align: middle;
 }
-/* line 319, ../scss/_experiment.scss */
+/* line 324, ../scss/_experiment.scss */
 .experiment .x-small p {
   font-size: 0.25em;
   display: table-cell;
@@ -10574,24 +10578,24 @@ body.lock {
   opacity: 0;
   transition: 1s all ease;
 }
-/* line 330, ../scss/_experiment.scss */
+/* line 335, ../scss/_experiment.scss */
 .experiment .x-small p.showX, .experiment .x-small p.show {
   opacity: 1;
 }
 @media only screen and (max-width: 40em) {
-  /* line 319, ../scss/_experiment.scss */
+  /* line 324, ../scss/_experiment.scss */
   .experiment .x-small p {
     width: 7vw;
     padding-left: 0;
   }
 }
-/* line 343, ../scss/_experiment.scss */
+/* line 348, ../scss/_experiment.scss */
 .experiment .xx-small {
   height: 2vw;
   width: 2vw;
   border-radius: 4vw;
 }
-/* line 348, ../scss/_experiment.scss */
+/* line 353, ../scss/_experiment.scss */
 .experiment .xx-small a {
   font-size: .6em;
   display: table-cell;
@@ -10600,37 +10604,37 @@ body.lock {
   text-align: center;
   vertical-align: middle;
 }
-/* line 356, ../scss/_experiment.scss */
+/* line 361, ../scss/_experiment.scss */
 .experiment .xx-small a.fa-github {
   font-size: 1em;
   opacity: .75;
 }
-/* line 361, ../scss/_experiment.scss */
+/* line 366, ../scss/_experiment.scss */
 .experiment .xx-small a:before {
   display: block;
   opacity: 0;
   cursor: default;
   transition: 1s all ease;
 }
-/* line 368, ../scss/_experiment.scss */
+/* line 373, ../scss/_experiment.scss */
 .experiment .xx-small a.showX:before {
   opacity: 1;
   cursor: pointer;
 }
-/* line 376, ../scss/_experiment.scss */
+/* line 381, ../scss/_experiment.scss */
 .experiment .me .small p {
   height: 7vw;
   width: 6.5vw;
   font-size: 0.6em;
   padding-top: 0;
 }
-/* line 383, ../scss/_experiment.scss */
+/* line 388, ../scss/_experiment.scss */
 .experiment .me .x-small p {
   height: 5vw;
   width: 4.5vw;
   font-size: 0.5em;
 }
-/* line 391, ../scss/_experiment.scss */
+/* line 396, ../scss/_experiment.scss */
 .experiment .me .small p,
 .experiment .me .x-small p {
   white-space: normal;
@@ -10639,467 +10643,467 @@ body.lock {
   vertical-align: middle;
   text-align: center;
 }
-/* line 402, ../scss/_experiment.scss */
+/* line 407, ../scss/_experiment.scss */
 .experiment .animate .p1 {
   animation-duration: 2s;
   animation-delay: 0.3s;
   animation-iteration-count: infinite;
 }
-/* line 408, ../scss/_experiment.scss */
+/* line 413, ../scss/_experiment.scss */
 .experiment .animate .p2 {
   animation-duration: 2s;
   animation-delay: 1s;
   animation-iteration-count: infinite;
 }
-/* line 414, ../scss/_experiment.scss */
+/* line 419, ../scss/_experiment.scss */
 .experiment .animate .p3 {
   animation-duration: 2s;
   animation-delay: 0.7s;
   animation-iteration-count: infinite;
 }
 @media only screen {
-  /* line 422, ../scss/_experiment.scss */
+  /* line 427, ../scss/_experiment.scss */
   .experiment .pos_me {
     left: 50vw;
     top: 24vw;
   }
 }
 @media only screen {
-  /* line 429, ../scss/_experiment.scss */
+  /* line 434, ../scss/_experiment.scss */
   .experiment .pos_gallery {
     left: 33vw;
     top: 11vw;
   }
 }
 @media only screen {
-  /* line 436, ../scss/_experiment.scss */
+  /* line 441, ../scss/_experiment.scss */
   .experiment .pos_projects {
     left: 27vw;
     top: 28vw;
   }
 }
 @media only screen {
-  /* line 443, ../scss/_experiment.scss */
+  /* line 448, ../scss/_experiment.scss */
   .experiment .pos_exp {
     left: 59vw;
     top: 8vw;
   }
 }
 @media only screen {
-  /* line 450, ../scss/_experiment.scss */
+  /* line 455, ../scss/_experiment.scss */
   .experiment .pos_about {
     left: 56vw;
     top: 29vw;
   }
 }
 @media only screen {
-  /* line 457, ../scss/_experiment.scss */
+  /* line 462, ../scss/_experiment.scss */
   .experiment .pos_resume {
     left: 69vw;
     top: 24vw;
   }
 }
 @media only screen {
-  /* line 464, ../scss/_experiment.scss */
+  /* line 469, ../scss/_experiment.scss */
   .experiment .pos_mailto {
     left: 42vw;
     top: 1vw;
   }
 }
 @media only screen {
-  /* line 471, ../scss/_experiment.scss */
+  /* line 476, ../scss/_experiment.scss */
   .experiment .pos_github {
     left: 32vw;
     top: 45vw;
   }
 }
 @media only screen {
-  /* line 478, ../scss/_experiment.scss */
+  /* line 483, ../scss/_experiment.scss */
   .experiment .pos_instagram {
     left: 16vw;
     top: 12vw;
   }
 }
 @media only screen {
-  /* line 485, ../scss/_experiment.scss */
+  /* line 490, ../scss/_experiment.scss */
   .experiment .pos_linkedin {
     left: 53vw;
     top: 44vw;
   }
 }
 @media only screen {
-  /* line 493, ../scss/_experiment.scss */
+  /* line 498, ../scss/_experiment.scss */
   .experiment .pos_proj1 {
     left: 24vw;
     top: 23vw;
   }
 }
 @media only screen {
-  /* line 500, ../scss/_experiment.scss */
+  /* line 505, ../scss/_experiment.scss */
   .experiment .pos_proj2 {
     left: 18vw;
     top: 30vw;
   }
 }
 @media only screen {
-  /* line 507, ../scss/_experiment.scss */
+  /* line 512, ../scss/_experiment.scss */
   .experiment .pos_proj3 {
     left: 20vw;
     top: 39vw;
   }
 }
 @media only screen {
-  /* line 514, ../scss/_experiment.scss */
+  /* line 519, ../scss/_experiment.scss */
   .experiment .pos_proj4 {
     left: 43vw;
     top: 36vw;
   }
 }
 @media only screen {
-  /* line 522, ../scss/_experiment.scss */
+  /* line 527, ../scss/_experiment.scss */
   .experiment .pos_exp1 {
     left: 53vw;
     top: 6vw;
   }
 }
 @media only screen {
-  /* line 529, ../scss/_experiment.scss */
+  /* line 534, ../scss/_experiment.scss */
   .experiment .pos_exp2 {
     left: 71vw;
     top: 3vw;
   }
 }
 @media only screen {
-  /* line 536, ../scss/_experiment.scss */
+  /* line 541, ../scss/_experiment.scss */
   .experiment .pos_exp3 {
     left: 75vw;
     top: 17vw;
   }
 }
 @media only screen {
-  /* line 543, ../scss/_experiment.scss */
+  /* line 548, ../scss/_experiment.scss */
   .experiment .pos_exp4 {
     left: 71.5vw;
     top: 22vw;
   }
 }
 @media only screen {
-  /* line 551, ../scss/_experiment.scss */
+  /* line 556, ../scss/_experiment.scss */
   .experiment .pos_proj1_tech {
     left: 31vw;
     top: 22vw;
   }
 }
 @media only screen {
-  /* line 558, ../scss/_experiment.scss */
+  /* line 563, ../scss/_experiment.scss */
   .experiment .pos_proj1_s1 {
     left: 20.5vw;
     top: 19vw;
   }
 }
 @media only screen {
-  /* line 565, ../scss/_experiment.scss */
+  /* line 570, ../scss/_experiment.scss */
   .experiment .pos_proj1_s2 {
     left: 18.5vw;
     top: 24.5vw;
   }
 }
 @media only screen {
-  /* line 571, ../scss/_experiment.scss */
+  /* line 576, ../scss/_experiment.scss */
   .experiment .pos_proj1_git {
     left: 25.8vw;
     top: 30.3vw;
   }
 }
 @media only screen {
-  /* line 579, ../scss/_experiment.scss */
+  /* line 584, ../scss/_experiment.scss */
   .experiment .pos_proj2_tech {
     left: 13vw;
     top: 28vw;
   }
 }
 @media only screen {
-  /* line 586, ../scss/_experiment.scss */
+  /* line 591, ../scss/_experiment.scss */
   .experiment .pos_proj2_s1 {
     left: 13vw;
     top: 34vw;
   }
 }
 @media only screen {
-  /* line 593, ../scss/_experiment.scss */
+  /* line 598, ../scss/_experiment.scss */
   .experiment .pos_proj2_git {
     left: 23.5vw;
     top: 36.5vw;
   }
 }
 @media only screen {
-  /* line 601, ../scss/_experiment.scss */
+  /* line 606, ../scss/_experiment.scss */
   .experiment .pos_proj3_tech {
     left: 14.5vw;
     top: 41vw;
   }
 }
 @media only screen {
-  /* line 608, ../scss/_experiment.scss */
+  /* line 613, ../scss/_experiment.scss */
   .experiment .pos_proj3_s1 {
     left: 26vw;
     top: 44vw;
   }
 }
 @media only screen {
-  /* line 615, ../scss/_experiment.scss */
+  /* line 620, ../scss/_experiment.scss */
   .experiment .pos_proj3_s2 {
     left: 19vw;
     top: 46vw;
   }
 }
 @media only screen {
-  /* line 622, ../scss/_experiment.scss */
+  /* line 627, ../scss/_experiment.scss */
   .experiment .pos_proj3_git {
     left: 18.5vw;
     top: 38.5vw;
   }
 }
 @media only screen {
-  /* line 630, ../scss/_experiment.scss */
+  /* line 635, ../scss/_experiment.scss */
   .experiment .pos_proj4_tech {
     left: 40vw;
     top: 42vw;
   }
 }
 @media only screen {
-  /* line 637, ../scss/_experiment.scss */
+  /* line 642, ../scss/_experiment.scss */
   .experiment .pos_proj4_s1 {
     left: 47vw;
     top: 43vw;
   }
 }
 @media only screen {
-  /* line 644, ../scss/_experiment.scss */
+  /* line 649, ../scss/_experiment.scss */
   .experiment .pos_proj4_s2 {
     left: 50vw;
     top: 35vw;
   }
 }
 @media only screen {
-  /* line 651, ../scss/_experiment.scss */
+  /* line 656, ../scss/_experiment.scss */
   .experiment .pos_proj4_git {
     left: 51vw;
     top: 41vw;
   }
 }
 @media only screen {
-  /* line 659, ../scss/_experiment.scss */
+  /* line 664, ../scss/_experiment.scss */
   .experiment .pos_exp1_1 {
     left: 47.5vw;
     top: 8vw;
   }
 }
 @media only screen {
-  /* line 666, ../scss/_experiment.scss */
+  /* line 671, ../scss/_experiment.scss */
   .experiment .pos_exp1_2 {
     left: 49.5vw;
     top: 2vw;
   }
 }
 @media only screen {
-  /* line 673, ../scss/_experiment.scss */
+  /* line 678, ../scss/_experiment.scss */
   .experiment .pos_exp1_3 {
     left: 57vw;
     top: 1vw;
   }
 }
 @media only screen {
-  /* line 680, ../scss/_experiment.scss */
+  /* line 685, ../scss/_experiment.scss */
   .experiment .pos_exp2_1 {
     left: 65.5vw;
     top: 2vw;
   }
 }
 @media only screen {
-  /* line 687, ../scss/_experiment.scss */
+  /* line 692, ../scss/_experiment.scss */
   .experiment .pos_exp2_2 {
     left: 78vw;
     top: 0.5vw;
   }
 }
 @media only screen {
-  /* line 694, ../scss/_experiment.scss */
+  /* line 699, ../scss/_experiment.scss */
   .experiment .pos_exp2_3 {
     left: 78.5vw;
     top: 6vw;
   }
 }
 @media only screen {
-  /* line 701, ../scss/_experiment.scss */
+  /* line 706, ../scss/_experiment.scss */
   .experiment .pos_exp3_1 {
     left: 76vw;
     top: 11.5vw;
   }
 }
 @media only screen {
-  /* line 708, ../scss/_experiment.scss */
+  /* line 713, ../scss/_experiment.scss */
   .experiment .pos_exp3_2 {
     left: 81.5vw;
     top: 14vw;
   }
 }
 @media only screen {
-  /* line 715, ../scss/_experiment.scss */
+  /* line 720, ../scss/_experiment.scss */
   .experiment .pos_exp3_3 {
     left: 82.5vw;
     top: 19.5vw;
   }
 }
 @media only screen {
-  /* line 723, ../scss/_experiment.scss */
+  /* line 728, ../scss/_experiment.scss */
   .experiment .pos_me_1 {
     left: 72.5vw;
     top: 31vw;
   }
 }
 @media only screen {
-  /* line 730, ../scss/_experiment.scss */
+  /* line 735, ../scss/_experiment.scss */
   .experiment .pos_me_2 {
     left: 68.5vw;
     top: 44vw;
   }
 }
 @media only screen {
-  /* line 737, ../scss/_experiment.scss */
+  /* line 742, ../scss/_experiment.scss */
   .experiment .pos_me_3 {
     left: 61vw;
     top: 45.5vw;
   }
 }
 @media only screen {
-  /* line 744, ../scss/_experiment.scss */
+  /* line 749, ../scss/_experiment.scss */
   .experiment .pos_me_4 {
     left: 72vw;
     top: 39vw;
   }
 }
 @media only screen {
-  /* line 751, ../scss/_experiment.scss */
+  /* line 756, ../scss/_experiment.scss */
   .experiment .pos_me_5 {
     left: 76vw;
     top: 43vw;
   }
 }
 @media only screen {
-  /* line 758, ../scss/_experiment.scss */
+  /* line 763, ../scss/_experiment.scss */
   .experiment .pos_me_6 {
     left: 78vw;
     top: 38vw;
   }
 }
 @media only screen {
-  /* line 765, ../scss/_experiment.scss */
+  /* line 770, ../scss/_experiment.scss */
   .experiment .pos_me_7 {
     left: 82vw;
     top: 44vw;
   }
 }
 @media only screen {
-  /* line 772, ../scss/_experiment.scss */
+  /* line 777, ../scss/_experiment.scss */
   .experiment .pos_me_8 {
     left: 83.5vw;
     top: 38.5vw;
   }
 }
 @media only screen {
-  /* line 779, ../scss/_experiment.scss */
+  /* line 784, ../scss/_experiment.scss */
   .experiment .pos_me_9 {
     left: 80vw;
     top: 31vw;
   }
 }
 @media only screen {
-  /* line 786, ../scss/_experiment.scss */
+  /* line 791, ../scss/_experiment.scss */
   .experiment .pos_me_10 {
     left: 77vw;
     top: 26vw;
   }
 }
 @media only screen {
-  /* line 794, ../scss/_experiment.scss */
+  /* line 799, ../scss/_experiment.scss */
   .experiment .pos_animate_1 {
     left: 61vw;
     top: 26vw;
   }
 }
 @media only screen {
-  /* line 801, ../scss/_experiment.scss */
+  /* line 806, ../scss/_experiment.scss */
   .experiment .pos_animate_2 {
     left: 44vw;
     top: 11vw;
   }
 }
 @media only screen {
-  /* line 808, ../scss/_experiment.scss */
+  /* line 813, ../scss/_experiment.scss */
   .experiment .pos_animate_3 {
     left: 37vw;
     top: 22vw;
   }
 }
 @media only screen {
-  /* line 815, ../scss/_experiment.scss */
+  /* line 820, ../scss/_experiment.scss */
   .experiment .pos_animate_4 {
     left: 65vw;
     top: 25vw;
   }
 }
 @media only screen {
-  /* line 822, ../scss/_experiment.scss */
+  /* line 827, ../scss/_experiment.scss */
   .experiment .pos_animate_5 {
     left: 83vw;
     top: 26vw;
   }
 }
 @media only screen {
-  /* line 829, ../scss/_experiment.scss */
+  /* line 834, ../scss/_experiment.scss */
   .experiment .pos_animate_6 {
     left: 18vw;
     top: 3vw;
   }
 }
 @media only screen {
-  /* line 836, ../scss/_experiment.scss */
+  /* line 841, ../scss/_experiment.scss */
   .experiment .pos_animate_7 {
     left: 14vw;
     top: 21vw;
   }
 }
 @media only screen {
-  /* line 843, ../scss/_experiment.scss */
+  /* line 848, ../scss/_experiment.scss */
   .experiment .pos_animate_8 {
     left: 43vw;
     top: 47vw;
   }
 }
 @media only screen {
-  /* line 850, ../scss/_experiment.scss */
+  /* line 855, ../scss/_experiment.scss */
   .experiment .pos_animate_9 {
     left: 85vw;
     top: 28.5vw;
   }
 }
 @media only screen {
-  /* line 857, ../scss/_experiment.scss */
+  /* line 862, ../scss/_experiment.scss */
   .experiment .pos_animate_10 {
     left: 20vw;
     top: 9vw;
   }
 }
 @media only screen {
-  /* line 864, ../scss/_experiment.scss */
+  /* line 869, ../scss/_experiment.scss */
   .experiment .pos_animate_11 {
     left: 16vw;
     top: 7vw;
   }
 }
 @media only screen {
-  /* line 871, ../scss/_experiment.scss */
+  /* line 876, ../scss/_experiment.scss */
   .experiment .pos_animate_12 {
     left: 62vw;
     top: 6vw;
