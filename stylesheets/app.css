@@ -10263,7 +10263,7 @@ body.lock {
 /* line 15, ../scss/_experiment.scss */
 .experiment .mobile {
   position: fixed;
-  bottom: 150px;
+  bottom: 100px;
   width: 80%;
   margin-left: 10%;
   font-family: experiment;
@@ -10274,7 +10274,7 @@ body.lock {
   /* line 25, ../scss/_experiment.scss */
   .experiment .text {
     position: fixed;
-    bottom: 50px;
+    bottom: 25px;
     width: 80%;
     margin-left: 10%;
     font-family: experiment;
