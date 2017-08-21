@@ -212,6 +212,9 @@ if ($handle) {
 					<div class="show-for-small-only mobile">
 						<p>as of now, the website is not optimized for mobile experience. desktop viewing is advised. thanks.</p>
 					</div>
+					<div class="text">
+						<p>click on child circle to expand. click on parent circle to go back</p>
+					</div>
 				</div>
 			</div>
 		</div>
